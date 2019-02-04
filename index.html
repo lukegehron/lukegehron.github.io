@@ -9,6 +9,8 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display" rel="stylesheet">
 
 
@@ -18,29 +20,38 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
   <script language="javascript" type="text/javascript" src="libraries/p5.js"></script>
   <script language="javascript" type="text/javascript" src="libraries/p5.dom.js"></script>
+  <script type="text/javascript" src="/js/archinect.js"></script>
+  <link type="text/css" rel="stylesheet" href="/css/archinect.v3.css">
+<link href="css/dflip/dflip.css" rel="stylesheet" type="text/css">
+<link href="css/dflip/themify-icons.css" rel="stylesheet" type="text/css">
+<script src="js/dflip/dflip.js" type="text/javascript"></script>
 
 <style>
 
+
+
 body {
   font-size: 12px;
-font-family: monospace;
+font-family: Roboto;
 text-align: center;
 /* font-size: 14px; */
 /* background-color: #f2f2f2; */
 box-sizing: border-box;
 /* margin: 40px; */
 }
+
 #name{
-  font-family: 'Major Mono Display', monospace;
+  /* font-family: 'Permanent Marker', sans-serif; */
   font-style: black;
   text-align: justify;
 }
   /* font-size: 12px; */
+
 #about{
   text-align: justify;
   font-size: 12px;
 }
-h6{font-family: monospace;
+h6{font-family: Roboto;
 /*font-style: thin;*/
 font-size: 13px;
 text-align: justify;
@@ -54,27 +65,318 @@ a:visited {
   font-family: 'Major Mono Display', monospace;
     color: black;
 }
+
 /* mouse over link */
 a:hover {
   font-family: 'Major Mono Display', monospace;
     color: black;
 }
+
 /* selected link */
 a:active {
   font-family: 'Major Mono Display', monospace;
     color: black;
 }
-h5{font-family: monospace;
+h5{font-family: 'Major Mono Display', monospace;
 font-style: black;
 font-size: 17px;
 }
-h1{font-family:'Major Mono Display', monospace;
+h1{font-family: 'Major Mono Display', monospace;
 font-style: black;
 }
+.overlay {
+  height: 0;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(255);
+  background-color: rgba(255,255,255, 0.95);
+  overflow-y: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  /* font-size: 36px; */
+  color: #000;
+  display: block;
+  transition: 0.3s;
+  border-style: none;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  }
+
+}
+
+.hovereffect {
+  width: 100%;
+  height: 100%;
+  /* float: left; */
+  overflow: hidden;
+  position: relative;
+  /* text-align: center; */
+  /* cursor: default; */
+}
+
+.hovereffect .textover {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+  /* left: 0; */
+  background-color: rgba(255, 255, 255, 0.9);
+  /* top: -200px; */
+  opacity: 0;
+  /* top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+ -ms-transform: translate(-50%, -50%); */
+ /* text-align: center; */
+}
+
+.hovereffect:hover .textover {
+  opacity: 1;
+  /* filter: alpha(opacity=100); */
+  top: 0px;
+  /* -webkit-transition-delay: 0s;
+  transition-delay: 0s; */
+  border-style: none;
+  /* top: 50%; */
+   /* left: 50%;
+ transform: translate(-50%, -50%);
+ -ms-transform: translate(-50%, -50%); */
+ text-align: center;
+}
+
+
+
+.hovereffect a.info {
+  font-size: 40px;
+  line-height: 30%;
+  /* display: inline-block; */
+  top: 50%;
+ left: 50%;
+ /* transform: translate(-50%, -50%);
+ -ms-transform: translate(-50%, -50%); */
+ /* text-align: center; */
+}
+
+
+
+.hovereffect:hover a.info {
+  /* top: 50%; */
+   /* left: 50%; */
+   /* transform: translate(-50%, -50%);
+   -ms-transform: translate(-50%, -50%); */
+   /* text-align: center; */
+  color: #000;
+border-style: none;
+  /* -webkit-transition-delay: 0.3s;
+  transition-delay: 0.3s; */
+}
+
+
 </style>
 
 
 <body>
+  <div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="overlay-content">
+    <div class="container">
+    <div class="row" id="about">
+        <div class="col-xs-12 col-sm-6 col-lg-4 col-xl-3">
+
+
+
+    <!-- About Me -->
+
+
+
+      <div>
+      <h5 style="font-size: 40px;">luke gehron</h5>
+      </div>
+
+
+
+
+
+          <div id="resume">
+              <!-- <h4 style="margin-top: -20px"><b>Resume</b></h4> -->
+
+  <div style=" margin-top: 28px">
+
+            <img src="images/profile.png" style="width: 80%; margin-top: -15px; margin-left: 0px" >
+            <p style="margin-top: 0px; text-align: center; margin-left: -60px">
+            </br> 651.560.5050 </br>
+            <a class="email" href="mailto:lukegehron@gmail.com">lukegehron@gmail.com</a>
+            Boston, MA 02120</br></br>
+          </p>
+  </div>
+  </div>
+  </div>
+
+  <div class="col-xs-12 col-sm-6 col-lg-4 col-xl-3">
+
+  <div style=" margin-top: 20px;">
+
+    <h6 style="font-size: 20px"><b>PROFESSIONAL</b></h6>
+
+  <p><b style="font-size: 15px">Payette</b> <br/>3D Viz Designer<br/>
+          Boston, MA | Sept 2017-Current</p>
+
+          <p>+ Schematic and Conceptual Design<br/>
+             + Construction Documentation<br/>
+             + Project Coordination<br/>
+             + International Development</p>
+
+             <p><b style="font-size: 15px">D-F-A</b> <br/>Junior Designer<br/>
+          New York City, NY | 2015-2017</p>
+
+          <p>+ Deployed Stations<br/>
+             + Map Graphics<br/>
+             + Logistical Coordination</p>
+
+
+             <p><b style="font-size: 15px">Kushner Studios</b> <br/>Architectural Drafter<br/>
+          New York City, NY | Summer 2015</p>
+
+          <p>+ Residential Drafting<br/>
+             + Survey Existing Conditions</p>
+
+
+             <p><b style="font-size: 15px">Philip Fretwell Architect</b> <br/>Architectural Intern<br/>
+          Auburn, AL | Fall/Winter 2014</p>
+
+          <p>+ Residential Drafting<br/>
+             + Survey Existing Conditions</p>
+
+  </div>
+  </div>
+  <div class="col-xs-12 col-sm-6 col-lg-4 col-xl-3">
+
+
+  <div style=" margin-top: 20px">
+
+
+
+            <h6 style="font-size: 20px"><b>EDUCATION</b></h6>
+
+
+
+                  <p><b style="font-size: 15px">Auburn University</b><br/>
+                  Bachelor of Architecture<br/>
+                  August 2010 - May 2016<br/>
+                    + Thesis Abroad: Auckland, NZ
+                    </p>
+
+
+
+                  <h6 style="font-size: 20px"><b>RECOGNITION</b></h6>
+
+                  <p><b style="font-size: 15px">Sound Space</b><br/>
+                  Best VR in Industrial + Commercial<br/>
+                  Best use of AutoDesk Product<br/>
+                  Reality Virtually Hackathon | 2019</p>
+
+                  <p><b style="font-size: 15px">Central Park Timber Tower </b><br/>
+                  Featured on Dezeen<br/>
+                  D-F-A | 2017</p>
+
+                  <p><b style="font-size: 15px"> GI Pavilion Competition</b><br/>
+                  Finalist<br/>
+                  D-F-A | 2015</p>
+
+                  <p><b style="font-size: 15px"> 3 Minute Thesis Competition</b><br/>
+                  Finalist<br/>
+                  Unitec NZ Architecture | 2015</p>
+
+                  <p><b style="font-size: 15px"> Digital Tattoo Machine</b><br/>
+                  Featured on Hack-A-Day<br/>
+                  Personal Project | 2013</p>
+
+                  <p><b style="font-size: 15px"> Studio Book Award</b><br/>
+                  Professor Bob Faust<br/>
+                  Auburn Universtiy | 2012</p>
+
+
+
+
+
+
+  </div>
+
+  </div>
+  <div class="col-xs-12 col-sm-6 col-lg-4 col-xl-3">
+
+
+
+     <div style="margin-top: 20px">
+      <h6 style="font-size: 20px"><b>EVENTS</b></h6>
+
+      <p><b style="font-size: 15px">Reality Virtually Hackathon</b> <br/>Sound Space<br/>
+          Cambridge, MA | Jan 2019</p>
+
+      <p><b style="font-size: 15px">ABX Expo Boston</b> <br/>Conference Speaker<br/>
+          Boston, MA | Nov 2018</p>
+
+          <p><b style="font-size: 15px">Desgin Tech Throwdown</b> <br/>Team Payette<br/>
+          Boston, MA | Nov 2018</p>
+
+          <p><b style="font-size: 15px">BeyondAEC Hackathon</b> <br/>J3LLY: Rhino Controller<br/>
+              Boston, MA | July 2018</p>
+
+              <p><b style="font-size: 15px">AA Visting School</b> <br/>Embedded Inteligence<br/>
+              New York City, NY | July 2014</p>
+
+          <h6 style="font-size: 20px"><b>SKILLS</b></h6>
+
+                      <p class="w3-half">
+                         Rhino </br> Grasshopper </br> Python  </br>
+                         Photoshop </br> Illustrator </br> Indesign  </br>
+                         Revit </br> Dynamo </br> 3D Printing </br>
+                         Laser Cutting </p>
+
+                         <p class="w3-half"> V-Ray </br> 3ds Max </br> Unity </br>C# Scripting
+
+                         </br> HTML </br> CSS </br> JavaScript </br> P5.JS </br> Processing  </br> Arduino
+                        </p>
+
+           </div>
+           </div>
+           </div>
+           </div>
+  </div>
+</div>
+
   <div class="container">
 
 
@@ -85,10 +387,10 @@ font-style: black;
   <header id="portfolio">
 
     <div id="name">
-    <h1 style="font-size: 40px; margin-top: 5px"><a href="https://lukegehron.github.io/">luke gehron</a></h1>
-    <h1 style="font-size: 15px; margin-top: -35px; text-align: right;">
-      <a href="https://lukegehron.github.io/resume/"><i class="fa fa-user fa-fw w3-center"></i></a>
-      <a href="https://lukegehron.github.io/portfolio/"><i class=" fa fa-book fa-fw w3-center"></i></a>
+    <h1 style="font-size: 40px; margin-top: 15px"><a href="https://lukegehron.github.io">luke gehron</a></h1>
+    <h1 style="font-size: 15px; margin-top: -25px; text-align: right;">
+      <a class="Resume" onclick="openNav()"><i class="fa fa-user fa-fw w3-center"></i></a>
+      <a class="PortfolioCoverButton _df_custom" source="https://d38w84nuu9j2kr.cloudfront.net/uploads/portfolio/1531071553.pdf" id="df_manual_custom"><i class=" fa fa-book fa-fw w3-center"></i></a>
       <a href="http://www.github.com/lukegehron"><i class=" fa fa-file-code-o fa-fw w3-center"></i></a></h1>
 
     </div>
@@ -109,163 +411,193 @@ font-style: black;
 
       <div class="col-xs-12 col-sm-6 col-lg-4 col-xl-3">
 
-      <div class="box">
-      <div class="screenshot">
-      <a href="https://lukegehron.github.io"><img src="images1/SolarTool1.jpg" style="width:100%"/></a>
+      <div class="hovereffect">
+      <img class="img-responsive" src="images1/SolarTool1.jpg" style="width:100%">
+      <div class="textover">
+      <a class="info" href="#"><br><p>solar</p><br><p>comfort</p><br><p>tool</p></a>
       </div>
-      <!-- <p>SOLAR COMFORT TOOL // PAYETTE</p> -->
       </div>
-    </div>
+      </div>
+
+
 
     <div class="col-xs-12 col-sm-6 col-lg-4 col-xl-3">
 
-    <div class="box">
-    <div class="screenshot">
-    <a href="https://lukegehron.github.io"><img src="images1/SoundSpace1.jpg" style="width:100%"/></a>
+    <div class="hovereffect">
+    <a href="https://lukegehron.github.io"><img src="images1/SoundSpace1.jpg" style="width:100%"></a>
+    <div class="textover">
+    <a class="info" href="#"><br><br><p>sound</p><br><p>space</p></a>
     </div>
-    <!-- <p>SOLAR COMFORT TOOL // PAYETTE</p> -->
     </div>
-  </div>
+    </div>
+
 
       <div class="col-xs-12 col-sm-6 col-lg-4 col-xl-3">
 
-        <div class="box">
-        <div class="screenshot">
-        <a href="https://lukegehron.github.io"><img src="images1/BookBooth1.jpg" style="width:100%"/></a>
+        <div class="hovereffect">
+        <a href="https://lukegehron.github.io"><img src="images1/BookBooth1.jpg" style="width:100%"></a>
+        <div class="textover">
+        <a class="info" href="#"><br><p>puzzle</p><br><p>piece</p><br><p>booth</p></a>
         </div>
-        <!-- <p>BOOK BOOTH // UNITEC (NEW ZEALAND)</p> -->
         </div>
-      </div>
+        </div>
 
       <div class="col-xs-12 col-sm-6 col-lg-4 col-xl-3">
 
-        <div class="box">
-<div class="screenshot">
-<a href="https://lukegehron.github.io"><img src="images1/Shelter1.jpg" style="width:100%"/></a>
+        <div class="hovereffect">
+<a href="https://lukegehron.github.io"><img src="images1/Shelter1.jpg" style="width:100%"></a>
+<div class="textover">
+<a class="info" href="#"><br><br><p>paper</p><br><p>shelter</p></a>
 </div>
-<!-- <p>PAPER SHELTER // AA VISITING SCHOOL</p> -->
-</div>
-</div>
-
-<div class="col-xs-12 col-sm-6 col-lg-4 col-xl-3">
-
-<div class="box">
-<div class="screenshot">
-<a href="https://lukegehron.github.io"><img src="images1/Modular1.jpg" style="width:100%"/></a>
-</div>
-<!-- <p>MODULAR PAVILION // GI COMPETITION</p> -->
 </div>
 </div>
 
 <div class="col-xs-12 col-sm-6 col-lg-4 col-xl-3">
 
-<div class="box">
-<div class="screenshot">
-<a href="https://lukegehron.github.io"><img src="images1/J3lly1.jpg" style="width:100%"/></a>
+<div class="hovereffect">
+<a href="https://lukegehron.github.io"><img src="images1/Modular1.jpg" style="width:100%"></a>
+<div class="textover">
+<a class="info" href="#"><br><br><p>modular</p><br><p>pavilion</p></a>
 </div>
-<!-- <p>J3LLY // BEYOND AEC HACKATHON</p> -->
-</div>
-</div>
-
-<div class="col-xs-12 col-sm-6 col-lg-4 col-xl-3">
-
-<div class="box">
-<div class="screenshot">
-<a href="https://lukegehron.github.io"><img src="images1/Tattoo1.jpg" style="width:100%"/></a>
-</div>
-<!-- <p>TATTOO MACHINE // PERSONAL PROJECT</p> -->
 </div>
 </div>
 
 <div class="col-xs-12 col-sm-6 col-lg-4 col-xl-3">
 
-<div class="box">
-<div class="screenshot">
-<a href="https://lukegehron.github.io"><img src="images1/Cabins1.jpg" style="width:100%"/></a>
+<div class="hovereffect">
+<a href="https://lukegehron.github.io"><img src="images1/J3lly1.jpg" style="width:100%"></a>
+<div class="textover">
+<a class="info" href="#"><br><p>j3lly:</p><br><p>rhino</p><br><p>contol</p></a>
 </div>
-<!-- <p>HILLSIDE CABINS // YAC COMPETITION</p> -->
-</div>
-</div>
-
-<div class="col-xs-12 col-sm-6 col-lg-4 col-xl-3">
-
-<div class="box">
-<div class="screenshot">
-<a href="https://lukegehron.github.io"><img src="images1/Tower1.jpg" style="width:100%"/></a>
-</div>
-<!-- <p>CENTRAL PARK TIMBER TOWER // D-F-A</p> -->
 </div>
 </div>
 
 <div class="col-xs-12 col-sm-6 col-lg-4 col-xl-3">
 
-<div class="box">
-<div class="screenshot">
-<a href="https://lukegehron.github.io"><img src="images1/Healthcare1.jpg" style="width:100%"/></a>
+<div class="hovereffect">
+<a href="https://lukegehron.github.io"><img src="images1/Tattoo1.jpg" style="width:100%"></a>
+<div class="textover">
+<a class="info" href="#"><br><p>digital</p><br><p>tattoo</p><br><p>machine</p></a>
 </div>
-<!-- <p>HEALTH CLINIC // AUBURN UNIVERSITY</p> -->
-</div>
-</div>
-
-<div class="col-xs-12 col-sm-6 col-lg-4 col-xl-3">
-
-<div class="box">
-<div class="screenshot">
-<a href="https://lukegehron.github.io"><img src="images1/Gallery1.jpg" style="width:100%"/></a>
-</div>
-<!-- <p>ART GALLERY // AUBURN UNIVERSITY</p> -->
 </div>
 </div>
 
 <div class="col-xs-12 col-sm-6 col-lg-4 col-xl-3">
 
-<div class="box">
-<div class="screenshot">
-<a href="https://lukegehron.github.io"><img src="images1/SoundPod1.jpg" style="width:100%"/></a>
+<div class="hovereffect">
+<a href="https://lukegehron.github.io"><img src="images1/Cabins1.jpg" style="width:100%"></a>
+<div class="textover">
+<a class="info" href="#"><br><br><p>hillside</p><br><p>cabins</p></a>
 </div>
-<!-- <p>SOUND POD // AUBURN UNIVERSITY</p> -->
-</div>
-</div>
-
-<div class="col-xs-12 col-sm-6 col-lg-4 col-xl-3">
-
-<div class="box">
-<div class="screenshot">
-<a href="https://lukegehron.github.io"><img src="images1/Bookstore1.jpg" style="width:100%"/></a>
-</div>
-<!-- <p>BOOKSTORE FACADE // AUBURN UNIVERSITY</p> -->
 </div>
 </div>
 
 <div class="col-xs-12 col-sm-6 col-lg-4 col-xl-3">
 
-<div class="box">
-<div class="screenshot">
-<a href="https://lukegehron.github.io"><img src="images1/Best1.jpg" style="width:100%"/></a>
+<div class="hovereffect">
+<a href="https://lukegehron.github.io"><img src="images1/Tower1.jpg" style="width:100%"></a>
+<div class="textover">
+<a class="info" href="#"><br><br><p>timber</p><br><p>tower</p></a>
 </div>
-<!-- <p>KAYAK STORAGE // AUBURN UNIVERSITY</p> -->
-</div>
-</div>
-
-<div class="col-xs-12 col-sm-6 col-lg-4 col-xl-3">
-
-<div class="box">
-<div class="screenshot">
-<a href="https://lukegehron.github.io"><img src="images1/Kayak1.jpg" style="width:100%"/></a>
-</div>
-<!-- <p>KAYAK STORAGE // AUBURN UNIVERSITY</p> -->
 </div>
 </div>
 
 <div class="col-xs-12 col-sm-6 col-lg-4 col-xl-3">
 
-<div class="box">
-<div class="screenshot">
-<a href="https://lukegehron.github.io"><img src="images1/Bench1.jpg" style="width:100%"/></a>
+<div class="hovereffect">
+<a href="https://lukegehron.github.io"><img src="images1/Healthcare1.jpg" style="width:100%"></a>
+<div class="textover">
+<a class="info" href="#"><br><p>health</p><br><p>care</p><br><p>clinic</p></a>
 </div>
-<!-- <p>BOOKSTORE FACADE // AUBURN UNIVERSITY</p> -->
 </div>
 </div>
+
+<div class="col-xs-12 col-sm-6 col-lg-4 col-xl-3">
+
+<div class="hovereffect">
+<a href="https://lukegehron.github.io"><img src="images1/Gallery1.jpg" style="width:100%"></a>
+<div class="textover">
+<a class="info" href="#"><br><br><p>art</p><br><p>gallery</p></a>
+</div>
+</div>
+</div>
+
+<div class="col-xs-12 col-sm-6 col-lg-4 col-xl-3">
+
+<div class="hovereffect">
+<a href="https://lukegehron.github.io"><img src="images1/SoundPod1.jpg" style="width:100%"></a>
+<div class="textover">
+<a class="info" href="#"><br><br><p>sound</p><br><p>pod</p></a>
+</div>
+</div>
+</div>
+
+<div class="col-xs-12 col-sm-6 col-lg-4 col-xl-3">
+
+<div class="hovereffect">
+<a href="https://lukegehron.github.io"><img src="images1/Bookstore1.jpg" style="width:100%"></a>
+<div class="textover">
+<a class="info" href="#"><br><br><br><p>bookstore</p><br><br></a>
+</div>
+</div>
+</div>
+
+<div class="col-xs-12 col-sm-6 col-lg-4 col-xl-3">
+
+<div class="hovereffect">
+<a href="https://lukegehron.github.io"><img src="images1/Best1.jpg" style="width:100%"></a>
+<div class="textover">
+<a class="info" href="#"><br><br><p>stage</p><br><p>set</p></a>
+</div>
+</div>
+</div>
+
+<div class="col-xs-12 col-sm-6 col-lg-4 col-xl-3">
+
+<div class="hovereffect">
+<a href="https://lukegehron.github.io"><img src="images1/Kayak1.jpg" style="width:100%"></a>
+<div class="textover">
+<a class="info" href="#"><br><br><p>kayak</p><br><p>center</p></a>
+</div>
+</div>
+</div>
+
+<div class="col-xs-12 col-sm-6 col-lg-4 col-xl-3">
+
+<div class="hovereffect">
+<a href="https://lukegehron.github.io"><img src="images1/Bench1.jpg" style="width:100%"></a>
+<div class="textover">
+<a class="info" href="#"><br><p>concrete</p><br><p>conduit</p><br><p>bench</p></a>
+</div>
+</div>
+</div>
+
+
+</div>
+<!-- <br><br><br><br><br><br> -->
+
+
+</div>
+
+</div>
+<!-- <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span> -->
+
+<script>
+var iHeight = window.innerWidth
+
+function openNav() {
+  if (iHeight > 1200){
+    document.getElementById("myNav").style.height = "90%";
+  }
+  else{
+    window.open("https://lukegehron.github.io/resume/","_self")
+  }
+}
+
+function closeNav() {
+  document.getElementById("myNav").style.height = "0%";
+}
+</script>
 
 
 
