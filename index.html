@@ -39,6 +39,11 @@ box-sizing: border-box;
 /* margin: 40px; */
 }
 
+.nav-item{
+  font-family: 'Major Mono Display', monospace;
+  color: black;
+}
+
 #name{
   /* font-family: 'Permanent Marker', sans-serif; */
   font-style: black;
@@ -68,7 +73,6 @@ a:visited {
 /* mouse over link */
 a:hover {
   font-family: 'Major Mono Display', monospace;
-    color: black;
 }
 
 /* selected link */
@@ -98,7 +102,7 @@ font-style: black;
 
 .overlay-content {
   position: relative;
-  top: 25%;
+  top: 15%;
   width: 100%;
   text-align: center;
   margin-top: 30px;
@@ -166,6 +170,11 @@ font-style: black;
  left: 50%;
 }
 
+.info1{
+  font-size: 30px;
+  line-height: 30%;
+}
+
 
 @media (min-width: 576px) {
   .hovereffect a.info {
@@ -194,6 +203,34 @@ font-style: black;
 }
 }
 
+.contain {
+  position: relative;
+  /* width: 50%; */
+}
+
+.hello {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+
+.imgHover {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 1.5s ease;
+  /* background-color: #008CBA; */
+}
+
+.contain:hover .imgHover {
+  opacity: 1;
+}
 
 .hovereffect:hover a.info {
   color: #000;
@@ -207,7 +244,7 @@ h3  {font-family: 'Major Mono Display', monospace; font-size: 40px; color: #000;
 <body>
 
 
-  <div id="myNav" class="overlay" style="margin-top:15px">
+  <div id="myNav" class="overlay" style="margin-top:22px">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   <div class="overlay-content">
     <div class="container">
@@ -215,7 +252,7 @@ h3  {font-family: 'Major Mono Display', monospace; font-size: 40px; color: #000;
         <div class="col-xs-12 col-sm-6 col-lg-4 col-xl-3">
 
       <div>
-      <h5 style="font-size: 50px;">luke gehron</h5>
+      <h5 style="font-size: 46px; font-family: 'Major Mono Display', monospace;">luke gehron</h5>
       </div>
 
 
@@ -224,10 +261,18 @@ h3  {font-family: 'Major Mono Display', monospace; font-size: 40px; color: #000;
 
   <div style=" margin-top: 28px">
 
-            <img src="images/profile.png" style="width: 80%; margin-top: -15px; margin-left: 0px" >
+    <div class="contain">
+
+              <img class="hello" src="images1/Face1.jpg" style="width: 80%; margin-top: -15px; margin-left: 0px" >
+            <div class="imgHover">
+              <img src="images1/Face2.jpg" style="width: 80%; margin-left: 0px" >
+            </div>
+            </div>
+
+            <!-- <img src="LG-1.gif" style="width: 80%; margin-top: -15px; margin-left: 0px" > -->
             <p style="margin-top: 0px; text-align: center; margin-left: -60px">
             </br> 651.560.5050 </br>
-            <a class="email" href="mailto:lukegehron@gmail.com">lukegehron@gmail.com</a>
+            <a class="email" href="mailto:luke.gehron@gmail.com">luke.gehron@gmail.com</a>
             Boston, MA 02120</br></br>
           </p>
   </div>
@@ -238,7 +283,7 @@ h3  {font-family: 'Major Mono Display', monospace; font-size: 40px; color: #000;
 
   <div style=" margin-top: 20px;">
 
-    <h6 style="font-size: 20px"><b>PROFESSIONAL</b></h6>
+    <h6 style="font-size: 20px"><b><u>PROFESSIONAL</u></b></h6>
 
   <p><b style="font-size: 15px">Payette</b> <br/>3D Viz Designer<br/>
           Boston, MA | Sept 2017-Current</p>
@@ -276,7 +321,7 @@ h3  {font-family: 'Major Mono Display', monospace; font-size: 40px; color: #000;
 
 
 
-            <h6 style="font-size: 20px"><b>EDUCATION</b></h6>
+            <h6 style="font-size: 20px"><b><u>EDUCATION</u></b></h6>
 
 
 
@@ -295,11 +340,11 @@ h3  {font-family: 'Major Mono Display', monospace; font-size: 40px; color: #000;
 
 
 
-                  <h6 style="font-size: 20px"><b>AWARDS</b></h6>
+                  <h6 style="font-size: 20px"><b><u>AWARDS</u></b></h6>
 
                   <p><b style="font-size: 15px">Sound Space</b><br/>
                   Best VR in Industrial + Commercial<br/>
-                  Best use of AutoDesk Product<br/>
+                  Best Use of AutoDesk Product<br/>
                   Reality Virtually Hackathon | 2019</p>
 
                 <p><b style="font-size: 15px"> Governors Island Pavilion</b><br/>
@@ -327,7 +372,7 @@ h3  {font-family: 'Major Mono Display', monospace; font-size: 40px; color: #000;
 
 
      <div style="margin-top: 20px">
-      <h6 style="font-size: 20px"><b>EVENTS</b></h6>
+      <h6 style="font-size: 20px"><b><u>EVENTS</u></b></h6>
 
       <p><b style="font-size: 15px">Reality Virtually Hackathon</b> <br/>Sound Space<br/>
           Cambridge, MA | Jan 2019</p>
@@ -339,21 +384,24 @@ h3  {font-family: 'Major Mono Display', monospace; font-size: 40px; color: #000;
           Boston, MA | Nov 2018</p>
 
           <p><b style="font-size: 15px">BeyondAEC Hackathon</b> <br/>J3LLY: Rhino Controller<br/>
-              Boston, MA | July 2018</p>
+              Watertown, MA | July 2018</p>
+
+          <p><b style="font-size: 15px">NOMA Coneference</b> <br/>Design Competition Participant<br/>
+              Philadelpia, PA | Oct 2014</p>
 
 
 
-          <h6 style="font-size: 20px"><b>SKILLS</b></h6>
+          <h6 style="font-size: 20px"><b><u>SKILLS</u></b></h6>
 
                       <p class="w3-half">
                          Rhino </br> Grasshopper </br> Python  </br>
-                         Photoshop </br> Illustrator </br> InDesign  </br>
+                         Adobe Suite  </br>
                          Revit </br> Dynamo </br> 3D Printing </br>
                          Laser Cutting </p>
 
                          <p class="w3-half"> V-Ray </br> 3ds Max </br> Unity </br>C# Scripting
 
-                         </br> HTML </br> CSS </br> JavaScript </br> P5.JS </br> Processing  </br> Arduino
+                         </br> HTML / CSS </br> JavaScript </br> Processing  </br> Arduino
                         </p>
 
            </div>
@@ -373,19 +421,25 @@ h3  {font-family: 'Major Mono Display', monospace; font-size: 40px; color: #000;
 
 
   <div class="p-2 flex-shrink-2 bd-highlight">
-    <span class="navbar-text" style="line-height: 30%; margin-top: 10px">
+    <span class="navbar-text" style="line-height: 30%; margin-top: 0px">
   <ul class="navbar-nav">
     <li class="nav-item">
-      <a class="Resume" onclick="openNav()" style="font-size: 15px"  title="Resume"><i class="fa fa-user fa-fw w3-center"></i></a>
+      <a href="https://lukegehron.github.io" style="font-size: 15px; background-color: #000; color:#FFF; padding: 2px 2px 2px 2px"><u>projects</u></a>
     </li>
     &nbsp;&nbsp;&nbsp;&nbsp;
     <li class="nav-item">
-      <a class="PortfolioCoverButton _df_custom" source="https://d38w84nuu9j2kr.cloudfront.net/uploads/portfolio/1531071553.pdf" id="df_manual_custom" style="font-size: 15px"  title="Portfolio"><i class=" fa fa-book fa-fw w3-center"></i></a>
+      <a href="http://www.github.com/lukegehron" style="font-size: 15px"><u>scripts</u></a>
+    </li>
+    &nbsp;&nbsp;&nbsp;&nbsp;</ul> <br> <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="Resume" onclick="openNav()" style="font-size: 15px"><u>résumé</u></a>
     </li>
     &nbsp;&nbsp;&nbsp;&nbsp;
     <li class="nav-item">
-      <a href="http://www.github.com/lukegehron" style="font-size: 15px"  title="Github"><i class=" fa fa-file-code-o fa-fw w3-center"></i></a>
+      <a class="PortfolioCoverButton _df_custom" source="https://d38w84nuu9j2kr.cloudfront.net/uploads/portfolio/1531071553.pdf" id="df_manual_custom" style="font-size: 15px"><u>portfolio</u></a>
     </li>
+
+
   </ul>
 
 </span>
@@ -520,9 +574,9 @@ h3  {font-family: 'Major Mono Display', monospace; font-size: 40px; color: #000;
 <div class="col-xs-12 col-sm-6 col-lg-4 col-xl-3">
 
 <div class="hovereffect">
-<a href="https://lukegehron.github.io"><img src="images1/Healthcare1.jpg" style="width:100%"></a>
+<a href="https://lukegehron.github.io"><img src="images1/DWRGraphics1.jpg" style="width:100%"></a>
 <div class="textover">
-<a class="info" href="https://lukegehron.github.io/#dflip-df_manual_custom/14/" target="_blank"><br><p>health</p><br><p>care</p><br><p>clinic</p></a>
+<a class="info" href="https://lukegehron.github.io/portfolio/dwr-studio-graphics"><br><p>dwr</p><br><p>studio</p><br><p>graphics</p></a>
 </div>
 </div>
 </div>
@@ -530,9 +584,9 @@ h3  {font-family: 'Major Mono Display', monospace; font-size: 40px; color: #000;
 <div class="col-xs-12 col-sm-6 col-lg-4 col-xl-3">
 
 <div class="hovereffect">
-<a href="https://lukegehron.github.io"><img src="images1/Gallery1.jpg" style="width:100%"></a>
+<a href="https://lukegehron.github.io"><img src="images1/GloveKeyboard1.jpg" style="width:100%"></a>
 <div class="textover">
-<a class="info" href="https://lukegehron.github.io/#dflip-df_manual_custom/16/" target="_blank"><br><br><p>art</p><br><p>gallery</p></a>
+<a class="info" href="https://lukegehron.github.io/portfolio/glove-keyboard"><br><br><p>glove</p><br><p>keyboard</p></a>
 </div>
 </div>
 </div>
@@ -546,6 +600,29 @@ h3  {font-family: 'Major Mono Display', monospace; font-size: 40px; color: #000;
 </div>
 </div>
 </div>
+
+<div class="col-xs-12 col-sm-6 col-lg-4 col-xl-3">
+
+<div class="hovereffect">
+<a href="https://lukegehron.github.io"><img src="images1/Healthcare1.jpg" style="width:100%"></a>
+<div class="textover">
+<a class="info" href="https://lukegehron.github.io/#dflip-df_manual_custom/14/" target="_blank"><br><p>health</p><br><p>care</p><br><p>clinic</p></a>
+</div>
+</div>
+</div>
+
+
+
+<div class="col-xs-12 col-sm-6 col-lg-4 col-xl-3">
+
+<div class="hovereffect">
+<a href="https://lukegehron.github.io"><img src="images1/Gallery1.jpg" style="width:100%"></a>
+<div class="textover">
+<a class="info" href="https://lukegehron.github.io/#dflip-df_manual_custom/16/" target="_blank"><br><br><p>art</p><br><p>gallery</p></a>
+</div>
+</div>
+</div>
+
 
 <div class="col-xs-12 col-sm-6 col-lg-4 col-xl-3">
 
@@ -607,25 +684,10 @@ h3  {font-family: 'Major Mono Display', monospace; font-size: 40px; color: #000;
 </div>
 </div>
 
-<div class="col-xs-12 col-sm-6 col-lg-4 col-xl-3">
 
-<div class="hovereffect">
-<a href="https://lukegehron.github.io"><img src="images1/DWRStudio1.jpg" style="width:100%"></a>
-<div class="textover">
-<a class="info" href="https://lukegehron.github.io/portfolio/dwr-studio-graphics"><br><p>dwr</p><br><p>studio</p><br><p>graphics</p></a>
-</div>
-</div>
-</div>
 
-<div class="col-xs-12 col-sm-6 col-lg-4 col-xl-3">
 
-<div class="hovereffect">
-<a href="https://lukegehron.github.io"><img src="images1/GloveKeyboard1.jpg" style="width:100%"></a>
-<div class="textover">
-<a class="info" href="https://lukegehron.github.io/portfolio/glove-keyboard"><br><br><p>glove</p><br><p>keyboard</p></a>
-</div>
-</div>
-</div>
+
 
 
 
