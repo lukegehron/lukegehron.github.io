@@ -80,6 +80,55 @@
       z-index: -100;
       display: block;
     }
+
+    h3 {
+      color: #666;
+      font-family: sans-serif;
+      font-size: 0.9rem;
+    }
+
+    .keywords{
+      font-family: sans-serif;
+color: #40484f;
+font-weight: 400;
+letter-spacing: 0;
+line-height: 1.46153846;
+text-align: left;
+font-size: 12px;
+padding: 0;
+border: 0;
+list-style: none;
+display: inline;
+margin: .1em;
+width: 15em;
+    }
+
+    ul {
+  /* display: inline; */
+  list-style: none;
+}
+
+li {
+  list-style-type: square;
+  list-style-position: outside;
+  margin-left: 1.3em;
+  font-family: sans-serif;
+font-weight: 400;
+letter-spacing: 0;
+list-style: none;
+list-style-type: square;
+list-style-position: outside;
+display: inline;
+margin: 2px 2px 2px 0;
+padding: 4px 5px 5px;
+font-size: 0.9rem;
+line-height: 1;
+color: #666;
+background-color: #eee;
+border: 0 solid #eee;
+border-radius: 3px;
+white-space: nowrap;
+}
   </style>
   <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
   <script src="titlebar.js"></script>
@@ -138,7 +187,7 @@
       <section id="skills">
         <div class="item">
           <h3 class="name">
-            Tools
+            Technologies:
           </h3>
           <ul class="keywords" v-for="skill in skills">
             <li>{{skill}}</li>
@@ -180,7 +229,10 @@
             ],
             skills: [
               "Rhino",
-              "Grasshopper"
+              "Grasshopper",
+              "Unity3D",
+              "C#",
+              "HTC Vive"
             ],
             title: 'SOUND SPACE '
           },
