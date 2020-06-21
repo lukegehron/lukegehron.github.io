@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SOUND SPACE</title>
+  <link rel="stylesheet" href="/project/css/styles.css">
+  <link rel="stylesheet" href="nav.css">
+  <link rel="stylesheet" href="print.css">
+  <!-- <link rel="stylesheet" href="../resume.css"> -->
+  <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display" rel="stylesheet">
+  <style>
+    @media (min-width: 768px) {
+
+      .backgroundIMG {
+        content: url(images/SoundSp1.jpg);
+        position: absolute;
+        max-width: 100%;
+        z-index: -100;
+        opacity: 0.3;
+        margin-left: -15%;
+      }
+    }
+
+    .section {
+      font-family: sans-serif;
+      color: #40484f;
+      font-weight: 400;
+      letter-spacing: 0;
+      line-height: 1.46153846;
+      text-align: left;
+      font-size: 12px;
+      margin: 0;
+      padding: 0;
+      border: 0;
+      display: block;
+      margin-bottom: 1rem;
+    }
+
+    .section>header {
+      font-family: sans-serif;
+      color: #40484f;
+      font-weight: 400;
+      letter-spacing: 0;
+      line-height: 1.46153846;
+      text-align: left;
+      font-size: 12px;
+      margin: 0;
+      padding: 0;
+      border: 0;
+      display: block;
+      position: relative;
+    }
+
+    .section-title {
+      font-family: sans-serif;
+      letter-spacing: 0;
+      line-height: 1.46153846;
+      text-align: left;
+      margin: 0;
+      display: inline-block;
+      background: #fff;
+      padding: 0 1em 0.3em 0;
+      color: #666;
+      text-transform: uppercase;
+      font-weight: 600;
+      border: none;
+      font-size: 0.9rem;
+    }
+
+    .section>header::after {
+      position: absolute;
+      left: 0;
+      top: 0.7em;
+      height: 1px;
+      background: #ccc;
+      content: "";
+      width: 100%;
+      z-index: -100;
+      display: block;
+    }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+  <script src="titlebar.js"></script>
+</head>
+
+
+
+<body>
+
+
+
+  <div id="app">
+    <titlebar></titlebar>
+    <br><br><br><br><br>
+
+    <div class="main-grid">
+
+      <main>
+        <h1 class="title">{{name}}</h1>
+        <span class="location">{{location}}<br><br>
+          <span class="what">An Acoustic Simulation Tool to Visualize Sound Waves in VR.
+          </span></span>
+        <iframe width="100%" height="360px" :src="vid1"
+          allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
+          style="filter:invert(100%) hue-rotate(.5turn); border: none;" frameborder="0px"
+          class="primary-image"></iframe>
+        <!-- <iframe src="https://player.vimeo.com/video/367768436" width="100%" height="360px" allowfullscreen class="primary-image" style="background-color: black;"></iframe> -->
+        <div class="secondary-images">
+          <img :src="img2[0]" alt="" class="secondary-image">
+          <img :src="img2[1]" alt="" class="secondary-image">
+        </div>
+        <span class="description">
+          <p v-for="d in desc">
+            <span>{{d}}</span><br>
+          </p>
+        </span>
+        <span class="backgroundIMG"></span>
+
+      </main>
+
+    </div>
+
+    <section class="basic-grid" style="top: 0px; margin-top: 10px;">
+      <div class="card" v-for="i in images">
+        <div class="hovereffect">
+          <img class="img-responsive" :src="i" :alt="name">
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <header>
+        <h2 class='section-title'>Info</h2>
+      </header>
+      <section id="skills">
+        <div class="item">
+          <h3 class="name">
+            Tools
+          </h3>
+          <ul class="keywords" v-for="skill in skills">
+            <li>{{skill}}</li>
+          </ul>
+        </div>
+      </section>
+    </section>
+
+  </div>
+
+
+  <script>
+    var app = new Vue({
+      el: '#app',
+      data: {
+        project: [
+          {
+            id: 1,
+            name: 'Sound Space',
+            image: '../images/SoundSp1.jpg',
+            location: 'Cambridge, MA // 2019',
+            subHeading: 'An Acoustic Simulation Tool to Visualize Sound Waves in VR',
+            img1: null,
+            vid1: "https://www.youtube.com/embed/3bQfJdd1CYg",
+            img2: [
+              "project/hack1.jpg",
+              "project/hack2.jpg"
+            ],
+            img3: [],
+            desc: [
+              "An acoustic simulation and visualization tool in VR to understand the influcence of sound on room designs developed during the Reality Virtually Hackathon at MIT. This provides architects with a visual tool to be more aware of the acoustic impacts of their different design options.",
+              "XR technologies enable us to visualize things that are intangible, and we want to take advantage of this opportunity to enhance the process of designing for design elements that are inherently non-visual. These tools can influence design in a new way, and provides architects with a visual tool to be more sensitive and aware of the acoustic impacts of their different design options."
+            ],
+            images: [
+              'images/SoundSpace2.jpg',
+              'images/SoundSpace2.jpg',
+              'images/SolarTool3.jpg',
+              'images/SoundSpace2.jpg'
+            ],
+            skills: [
+              "Rhino",
+              "Grasshopper"
+            ]
+          },
+          {
+            id: 2,
+            name: 'solar comfort tool',
+            image: 'images/SolarTool3.jpg',
+            lines: 'textover threeline'
+          },
+          {
+            id: 3,
+            name: 'acoustic analysis tool',
+            image: 'images/SoundSpace2.jpg',
+            lines: 'textover threeline'
+          }
+        ],
+
+      },
+      methods: {
+        addToCart() {
+          this.cart += 1
+        },
+        updateProject(project) {
+          this.image = project.image
+          this.lines = project.lines
+          this.name = project.name
+          this.location = project.location
+          this.subHeading = project.subHeading
+          this.img1 = project.img1
+          this.vid1 = project.vid1
+          this.img2 = project.img2
+          this.img3 = project.img3
+          this.desc = project.desc
+          this.images = project.images
+          this.skills = project.skills
+        }
+      },
+      created: function () {
+        var currentUrl = window.location.pathname;
+        console.log(currentUrl);
+        console.log(window.location.href);
+        var str = window.location.href;
+        var res = str.split("#");
+        var res = res[1];
+
+        this.updateProject(this.project[res])
+
+      }
+
+    })
+
+  </script>
+
+</body>
+
+</html>

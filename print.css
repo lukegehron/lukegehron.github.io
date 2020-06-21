@@ -1,0 +1,11 @@
+@media print {
+  body{
+    margin-top: -60px;
+  }
+  .basic-grid{
+    grid-template-columns: repeat(auto-fill, minmax(136px, 1fr));
+  }  
+  .nav-container{
+    visibility: hidden;
+  }
+}

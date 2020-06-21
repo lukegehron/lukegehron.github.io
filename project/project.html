@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOUND SPACE</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="../nav.css">
+    <link rel="stylesheet" href="../print.css">
+    <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display" rel="stylesheet">
+    <style>
+        @media (min-width: 768px) {
+    
+            .description::after {
+                content: url(../images/SoundSp1.jpg);
+                display:block;
+            }
+        }
+    
+        
+    </style>
+</head>
+
+
+
+<body>
+    <div class="nav-container">
+      <nav id="topBar">
+        <span id="title" class="logo">luke gehron</span>
+        <div class="right-menu" id="tableSpan">
+          <table>
+            <tr>
+              <td>
+                <a href="../index.html">projects</a>
+              </td>
+              <td>
+                <a href="#">scripts</a>
+              </td>
+            </tr>
+          </table>
+          <table>
+            <tr>
+              <td>
+                <a href="#">résumé</a>
+              </td>
+              <td>
+                <a href="../bio.html">biography</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </nav>
+      <br><br><br><br><br>
+    </div>
+  
+
+
+
+
+    <div class="main-grid">
+
+        <main>
+            <h1 class="title">Sound Space</h1>
+            <span class="location">Cambridge, MA // 2019<br><br>
+                <span class="what">An Acoustic Simulation Tool to Visualize Sound Waves in VR. 
+                </span></span>
+            <iframe width="100%" height="360px" src="https://www.youtube.com/embed/3bQfJdd1CYg"
+                allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="filter:invert(100%) hue-rotate(.5turn); border: none;"
+                frameborder="0px" class="primary-image"></iframe>
+            <!-- <iframe src="https://player.vimeo.com/video/367768436" width="100%" height="360px" allowfullscreen class="primary-image" style="background-color: black;"></iframe> -->
+            <div class="secondary-images">
+                <img src="hack1.jpg" alt="" class="secondary-image">
+                <img src="hack2.jpg" alt="" class="secondary-image">
+            </div>
+
+            <p class="description">An acoustic simulation and visualization tool in VR to understand the influcence of sound on room designs developed during the Reality Virtually Hackathon at MIT. 
+                This provides architects with a visual tool to be more aware of the acoustic impacts of their different design options.<br><br>
+                XR technologies enable us to visualize things that are intangible, and we want to take advantage of this opportunity to enhance the process of designing for design elements that are inherently non-visual. 
+                These tools can influence design in a new way, and provides architects with a visual tool to be more sensitive and aware of the acoustic impacts of their different design options.
+            
+            </p>
+
+
+        </main>
+
+    </div>
+    <section class="basic-grid" id="app">
+      <div class="card"  v-for="project in projects">
+        <div class="hovereffect">
+          <img class="img-responsive" :src="project.image" :alt="project.name">
+          <div :class="project.lines">
+            <a class="info" href="project/index.html">
+              {{ project.name }}
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div>
+
+      <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+  <script>
+    var app = new Vue({
+  el: '#app',
+  data: {
+    projects:[
+      {
+        name: 'sound space',
+        image: '../images/SoundSp1.jpg',
+        lines: 'textover twoline'
+      },
+      {
+        name: 'solar comfort tool',
+        image: '../images/SolarTool3.jpg',
+        lines: 'textover threeline'
+      },
+      {
+        name: 'acoustic analysis tool',
+        image: '../images/SoundSpace2.jpg',
+        lines: 'textover threeline'
+      },
+      {
+        name: 'bldg ballot',
+        image: '../images/ARApp2.jpg',
+        lines: 'textover twoline'
+      },
+      {
+        name: 'ceramic hexture',
+        image: '../images/ACAW2.jpg',
+        lines: 'textover twoline'
+      },
+      {
+        name: 'puzzle piece booth',
+        image: '../images/BookBooth1.jpg',
+        lines: 'textover threeline'
+      },
+      {
+        name: 'paper shelter',
+        image: '../images/Shelter1.jpg',
+        lines: 'textover twoline'
+      },
+      {
+        name: 'modular pavilion',
+        image: '../images/Modular1.jpg',
+        lines: 'textover twoline'
+      },
+      {
+        name: 'j3lly: rhino control',
+        image: '../images/J3lly1.jpg',
+        lines: 'textover threeline'
+      },
+      {
+        name: 'hillside cabins',
+        image: '../images/Cabins1.jpg',
+        lines: 'textover twoline'
+      },
+      {
+        name: 'central park tower',
+        image: '../images/Tower1.jpg',
+        lines: 'textover threeline'
+      },
+      {
+        name: 'digital tattoo machine',
+        image: '../images/Tattoo1.jpg',
+        lines: 'textover threeline'
+      },
+      {
+        name: 'glove keyboard',
+        image: '../images/GloveKeyboard1.jpg',
+        lines: 'textover twoline'
+      },
+      {
+        name: 'sound pod',
+        image: '../images/SoundPod1.jpg',
+        lines: 'textover twoline'
+      },
+      {
+        name: 'health care clinic',
+        image: '../images/Healthcare1.jpg',
+        lines: 'textover threeline'
+      },
+      {
+        name: 'flow path tool',
+        image: '../images/FlowPathSim1.jpg',
+        lines: 'textover threeline'
+      },
+      {
+        name: 'art gallery',
+        image: '../images/Gallery1.jpg',
+        lines: 'textover twoline'
+      },
+      {
+        name: 'bookstore',
+        image: '../images/Bookstore1.jpg',
+        lines: 'textover oneline'
+      },
+      {
+        name: 'stage set',
+        image: '../images/Best1.jpg',
+        lines: 'textover twoline'
+      },
+      {
+        name: 'kayak center',
+        image: '../images/Kayak1.jpg',
+        lines: 'textover twoline'
+      },
+      {
+        name: 'dwr boston',
+        image: '../images/DWRBoston1.jpg',
+        lines: 'textover twoline'
+      },
+      {
+        name: 'concrete conduit bench',
+        image: '../images/Bench1.jpg',
+        lines: 'textover threeline'
+      },
+      {
+        name: '136 summit ave',
+        image: '../images/136Summit1.jpg',
+        lines: 'textover threeline'
+      },
+      {
+        name: 'dwr studio graphics',
+        image: '../images/DWRGraphics1.jpg',
+        lines: 'textover threeline'
+      }
+    ]
+  } 
+})
+  </script>
+
+</body>
+
+</html>

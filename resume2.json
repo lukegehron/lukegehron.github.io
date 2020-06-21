@@ -1,0 +1,268 @@
+{
+  "basics": {
+    "name": "Luke Gehron",
+    "label": "Lead Computational Designer | AR / VR Developer",
+    "picture": "https://github.com/lukegehron/website2.0/raw/master/imgs/logo.png",
+    "email": "luke.gehron@gmail.com",
+    "phone": "(651) 560-0006",
+    "website": "http://lukegehron.github.io",
+    "summary": "I specailize in cutting-edge AEC technologies with a focus on creating data-driven buildings through the use of custom web applications, AR/VR tools, and visual scripting pipelines.",
+    "location": {
+      "address": "8 Rollins Ct",
+      "postalCode": "02120",
+      "city": "Cambridge",
+      "countryCode": "US",
+      "region": "MA"
+    },
+    "profiles": [{
+      "network": "Github",
+      "username": "lukegehron",
+      "url": "http://github.com/lukegehron"
+    }]
+  },
+  "work": [{
+    "company": "Payette",
+    "position": "Lead Computational Designer",
+    "website": "http://www.payette.com",
+    "city": "Boston",
+      "countryCode": "US",
+      "region": "MA",
+    "startDate": "Nov 2017",
+    "summary": "Description...",
+    "highlights": [
+      "Started the company",
+      "Started the company",
+      "Started the company"
+    ]
+  },{
+    "company": "D-F-A",
+    "position": "Architectural Designer",
+    "website": "http://www.d-f-a.com",
+    "city": "New York City",
+      "countryCode": "US",
+      "region": "NY",
+    "startDate": "Aug 2016",
+    "endDate": "Oct 2017",
+    "summary": "Description...",
+    "highlights": [
+      "Started the company",
+      "Started the company",
+      "Started the company"
+    ]
+  },{
+    "company": "KushnerSTUDIOS",
+    "position": "Junior Designer",
+    "website": "http://www.kushnerstudios.com",
+    "city": "New York City",
+      "countryCode": "US",
+      "region": "NY",
+    "startDate": "May 2016",
+    "endDate": "Aug 2016",
+    "summary": "Description...",
+    "highlights": [
+      "Started the company",
+      "Started the company",
+      "Started the company"
+    ]
+  },{
+    "company": "Auburn University",
+    "position": "Digital Design Instructor",
+    "website": "http://www.auburn.edu",
+    "city": "Auburn",
+      "countryCode": "US",
+      "region": "AL",
+    "startDate": "Sept 2015",
+    "endDate": "Oct 2015",
+    "summary": "Description...",
+    "highlights": [
+      "Started the company",
+      "Started the company",
+      "Started the company"
+    ]
+  }],
+  "education": [{
+    "institution": "Boston University - Boston, MA",
+    "area": "Computer Science",
+    "studyType": "Master of Science |",
+    "startDate": "2019",
+    "endDate": "2021",
+    "gpa": "3.8",
+    "courses": [
+      "Discrete Mathematics",
+      "Data Structures with Java",
+      "Computer Architecture",
+      "Analysis of Algorithms",
+      "Database Management with SQL",
+      "Operating Systems",
+      "Computer Graphics",
+      "Web Application Development",
+      "Server-Side Web Development",
+      "Computer Language Theory",
+      "Software Engineering",
+      "Data Science with Python",
+      "Machine Learning"
+    ]
+  },{
+    "institution": "Auburn University - Auburn, AL",
+    "area": "Architecture",
+    "studyType": "Bachelor of Architecture |",
+    "startDate": "2010",
+    "endDate": "2016",
+    "gpa": "3.3",
+    "courses": [
+      "Intro to Computer Science",
+      "Industrial Design in Modern Society",
+      "General Physics",
+      "Architectural Structures",
+      "Scuplture as Space",
+      "Careers in Design and Construction", 
+      "Architectural Studio",
+      "Arch History of the Built Enviroment",
+      "Enviromental Controls in Architecture",
+      "Materials and Methods of Construction",
+      "History of Urban Architecture",
+      "Professional Practice in Architecture"
+    ]
+  },{
+    "institution": "UNITEC School of Architecture - Auckland, NZ",
+    "area": "Thesis",
+    "studyType": "Study Abroad |",
+    "startDate": "2015",
+    "endDate": "2016",
+    "gpa": "4.0",
+    "courses": [
+      "Architectural Thesis Studio",
+      "Thesis Research",
+      "Digital Fabrication and Assembly"
+    ]
+  }],"awards": [{          
+    "title": "Hackathon Participant",
+    "date": "Mar 2020",
+    "awarder": "BeyondAEC Hackathon",
+    "summary": "Waltham MA - SolVR"
+  },{          
+    "title": "Hackathon Participant",
+    "date": "Jan 2020",
+    "awarder": "MIT Reality Hackathon",
+    "summary": "Cambridge MA - SpaceAR"
+  },{
+    "title": "Conference Speaker",
+    "date": "Oct 2019",
+    "awarder": "ACADIA 2019",
+    "summary": "Austin TX - Sound Space"
+  },{          
+    "title": "Hackathon Participant",
+    "date": "Oct 2019",
+    "awarder": "AEC Tech Hackathon",
+    "summary": "New York City - BLDG Ballot"
+  },{          
+    "title": "Workshop Participant",
+    "date": "Aug 2019",
+    "awarder": "ACAW / Boston Valley",
+    "summary": "Buffalo NY - Terracotta Hexture"
+  },{          
+    "title": "Hackathon Participant",
+    "date": "Jan 2019",
+    "awarder": "Reality Virtually Hackathon",
+    "summary": "Cambridge MA - Sound Space"
+  },{          
+    "title": "Conference Speaker",
+    "date": "Nov 2018",
+    "awarder": "ABX Expo Boston",
+    "summary": "Boston MA - Technical Storytelling"
+  },{          
+    "title": "Hackathon Participant",
+    "date": "July 2018",
+    "awarder": "BeyondAEC Hackathon",
+    "summary": "Watertown MA - J3LLY: Rhino Control"
+  },{          
+    "title": "Workshop Participant",
+    "date": "July 2014",
+    "awarder": "AA Visting School",
+    "summary": "New York City - Embedded Intelligence"
+  }],
+  
+  "publications": [{
+    "name": "SolVR",
+    "publisher": "Most Innovative Use of Technology",
+    "releaseDate": "Mar 2020"
+  },{
+    "name": "SpaceAR",
+    "publisher": "Best AR/VR App in Utility and Tools",
+    "releaseDate": "Jan 2020"
+  },{
+    "name": "BLDG Ballot",
+    "publisher": "Best Team Collaboration",
+    "releaseDate": "Oct 2019"
+  },{
+    "name": "IEEE GEM",
+    "publisher": "Conference Paper Publication",
+    "releaseDate": "May 2019"
+  },{
+    "name": "Sound Space",
+    "publisher": "Best VR in Industrial Commercial",
+    "releaseDate": "Jan 2019"
+  },{
+    "name": "Governors Island Pavilion",
+    "publisher": "Competition Finalist",
+    "releaseDate": "Dec 2016"
+  },{
+    "name": "Digital Tattoo Machine",
+    "publisher": "Featured on Hack-A-Day",
+    "releaseDate": "Aug 2013"
+  }],
+  "skills": [{
+    "name": "Front-End Web Dev",
+    "keywords": [
+      "HTML",
+      "CSS",
+      "Javascript",
+      "Vue",
+      "Three.JS"
+      
+    ]
+  },{
+    "name": "Back-End Web Dev",
+    "keywords": [
+      "NodeJS",
+      "PHP",
+      "mySQL",
+      "MongoDB"
+    ]
+  },{
+    "name": "Programming Languages",
+    "keywords": [
+      "Java",
+      "C#",
+      "Python",
+      "SQL",
+      ".NET Core"
+    ]
+  },{
+    "name": "3D Design Software",
+    "keywords": [
+      "Rhino",
+      "Grasshopper",
+      "Revit",
+      "Dynamo",
+      "Unity3D"
+    ]
+  },{
+    "name": "Presentation Software",
+    "keywords": [
+      "Photoshop",
+      "Illustrator",
+      "Sketch",
+      "InDesign"
+    ]
+  },{
+    "name": "Visualization Tools",
+    "keywords": [
+      "V-Ray",
+      "Processing / p5",
+      "D3",
+      "PowerBI"
+    ]
+  }
+  ]
+}

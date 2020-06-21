@@ -1,0 +1,115 @@
+body {
+  font-size: 12px;
+}
+
+.nav-container h6 {
+  font-size: 13px;
+  text-align: justify;
+}
+
+.nav-container h5 {
+  font-size: 17px;
+}
+
+
+.nav-container a:link {
+  text-decoration: none;
+  font-family: 'Major Mono Display', monospace;
+  color: black;
+}
+
+.nav-container a:visited {
+  text-decoration: none;
+  font-family: 'Major Mono Display', monospace;
+  color: black;
+}
+
+
+.nav-container a:hover {
+  text-decoration: none;
+  font-family: 'Major Mono Display', monospace;
+}
+
+
+.nav-container a:active {
+  text-decoration: none;
+  font-family: 'Major Mono Display', monospace;
+  color: black;
+}
+
+.nav-item {
+  font-family: 'Major Mono Display', monospace;
+  color: black;
+}
+
+#title {
+  font-size: 38px;
+  font-family: 'Major Mono Display', monospace;
+  min-width: 280px;
+  letter-spacing: -0.08em;
+}
+
+
+
+
+
+.right-menu {
+  grid-column: 3;
+  text-align: right;
+}
+
+.logo {
+  grid-column: 1;
+}
+
+.nav-container {
+  
+  max-width: 1100px;
+  margin: auto;
+  
+}
+
+
+nav {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+}
+
+nav a {
+  padding: 3px 5px 3px 5px;
+    text-decoration: underline;
+    font-family: 'Oswald', sans-serif;
+    transition: .3s all ease-in-out;
+  }
+  
+  nav a:hover {
+    color: white !important;
+    background-color: #000;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  #topBar{
+    position:fixed;
+    max-width: 1100px;
+    z-index: 3;
+    top:0px;
+    padding: 10px 0px 10px 0px;
+    background-color: #fff;
+  }
+
+
+  table {
+    width: auto;
+    margin-right: 0px;
+    margin-left: auto;
+  }
+  
+  
+  
+  #tableSpan{
+    font-size: 13px;  
+    vertical-align: middle; 
+    text-align: right;
+  }

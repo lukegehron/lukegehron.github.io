@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css">
+  <title>LUKE GEHRON || PROJECTS</title>
+  <style>
+    /* @import url('project/css/styles.css'); */
+    @import url('./nav.css');
+    @import url('./print.css');
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+  <script src="titlebar.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/postscribe/2.0.6/postscribe.min.js"></script>
+  <style>
+    .collapsible {
+      background-color: #eee;
+      cursor: pointer;
+      padding: 18px;
+      width: 100%;
+      border: none;
+      /* border-top: 1px;
+      border-bottom: 1px; */
+      text-align: left;
+      outline: none;
+      font-size: 15px;
+    }
+
+    .first {
+      border-radius: 8px 8px 0px 0px;
+    }
+
+    .last {
+      border-radius: 0px 0px 8px 8px;
+    }
+
+    .only {
+      border-radius: 8px;
+    }
+
+    .active,
+    .collapsible:hover {
+      background-color: #ccc;
+    }
+
+    .collapsible:after {
+      content: '\002B';
+      /* content: '\f0d7'; */
+      /* color: white; */
+      font-weight: bold;
+      float: right;
+      margin-left: 5px;
+    }
+
+    .active:after {
+      content: "\2212";
+      /* content: '\f0da'; */
+    }
+
+    .content {
+      padding: 0 18px;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.2s ease-out;
+      background-color: #f1f1f1;
+    }
+
+    .collapse {
+      max-width: 1100px;
+      margin: auto;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="app">
+    <titlebar></titlebar>
+
+    <br><br><br><br>
+    <div class="collapse">
+
+      <p>HTML/CSS/Javascript Scripts:</p>
+
+      <div class="HCJ" v-for="(web, index) in HCJ">
+        <button v-if="index == 0 && HCJ.length == 1" class="collapsible only">{{web.name}}</button>
+        <button v-else-if="index == 0" class="collapsible first">{{web.name}}</button>
+        <button v-else-if="index > 0 && index < HCJ.length - 1" class="collapsible">{{web.name}}</button>
+        <button v-else class="collapsible last">{{web.name}}</button>
+        <div class="content">
+          <a :href="web.website"> Visit {{ web.name }} Website </a>
+          <div :id="web.divName"></div>
+
+        </div>
+      </div>
+
+      <p>Python Scripts:</p>
+
+      <div class="python" v-for="(py, index) in python">
+        <button v-if="index == 0 && python.length == 1" class="collapsible only">{{py.name}}</button>
+        <button v-else-if="index == 0" class="collapsible first">{{py.name}}</button>
+        <button v-else-if="index > 0 && index < python.length - 1" class="collapsible">{{py.name}}</button>
+        <button v-else class="collapsible last">{{py.name}}</button>
+        <div class="content">
+          <div :id="py.divName"></div>
+        </div>
+      </div>
+
+      <p>C# Scripts:</p>
+
+      <div class="cSharp" v-for="(cs, index) in cSharp">
+        <button v-if="index == 0 && cSharp.length == 1" class="collapsible only">{{cs.name}}</button>
+        <button v-else-if="index == 0" class="collapsible first">{{cs.name}}</button>
+        <button v-else-if="index > 0 && index < cSharp.length - 1" class="collapsible">{{cs.name}}</button>
+        <button v-else class="collapsible last">{{cs.name}}</button>
+        <div class="content">
+          <div :id="cs.divName"></div>
+        </div>
+      </div>
+
+      <p>Shader Scripts:</p>
+
+      <div class="cSharp" v-for="(s, index) in shader">
+        <button v-if="index == 0 && shader.length == 1" class="collapsible only">{{s.name}}</button>
+        <button v-else-if="index == 0" class="collapsible first">{{s.name}}</button>
+        <button v-else-if="index > 0 && index < shader.length - 1" class="collapsible">{{s.name}}</button>
+        <button v-else class="collapsible last">{{s.name}}</button>
+        <div class="content">
+          <div :id="s.divName"></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    var app = new Vue({
+      el: '#app',
+      data: {
+        HCJ: [{
+          name: "Neumorphic Form",
+          divName: "web0",
+          gist: "https://gist.github.com/lukegehron/9f834466fd811f70bd585103ca65655b.js",
+          website: "https://lukegehron.github.io/Neumorphism/"
+        },{
+          name: "Solar Comfort Tool",
+          divName: "web1",
+          gist: "https://gist.github.com/lukegehron/09e71e88ef7cca3818088bca000c0829.js",
+          website: "https://payette.github.io/SummerComfortTool/"
+        },
+        {
+          name: "D3 Color Chart",
+          divName: "web2",
+          gist: "https://gist.github.com/lukegehron/09e71e88ef7cca3818088bca000c0829.js",
+          website: "http://www.google.com"
+        }
+      ],
+        cSharp: [{
+          name: "Touch Camera Zoom - Unity3D",
+          divName: "c0",
+          gist: "https://gist.github.com/lukegehron/09e71e88ef7cca3818088bca000c0829.js"
+        }, {
+          name: "Touch Camera Orbit - Unity3D",
+          divName: "c1",
+          gist: "https://gist.github.com/lukegehron/09e71e88ef7cca3818088bca000c0829.js"
+        },
+        {
+          name: "Vive Controls - Unity3D",
+          divName: "c2",
+          gist: "https://gist.github.com/lukegehron/09e71e88ef7cca3818088bca000c0829.js"
+        }],
+        python: [{
+          name: "Waffle Script - Rhino",
+          divName: "p0",
+          gist: "https://gist.github.com/lukegehron/09e71e88ef7cca3818088bca000c0829.js"
+        }
+        ],
+        shader: [{
+          name: "360IMG - Unity3D",
+          divName: "s0",
+          gist: "https://gist.github.com/lukegehron/09e71e88ef7cca3818088bca000c0829.js"
+        }
+        ]
+
+      }, mounted: function () {
+
+        for (let i = 0; i < this.HCJ.length; i++) {
+          postscribe('#' + this.HCJ[i].divName, `<script src=${this.HCJ[i].gist}><\/script>`)
+        }
+
+        for (let i = 0; i < this.cSharp.length; i++) {
+          postscribe('#' + this.cSharp[i].divName, `<script src=${this.cSharp[i].gist}><\/script>`)
+        }
+
+        for (let i = 0; i < this.python.length; i++) {
+          postscribe('#' + this.python[i].divName, `<script src=${this.python[i].gist}><\/script>`)
+        }
+
+        for (let i = 0; i < this.shader.length; i++) {
+          postscribe('#' + this.shader[i].divName, `<script src=${this.shader[i].gist}><\/script>`)
+        }
+
+
+      }
+    });
+  </script>
+
+  <script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    console.log(coll.length)
+
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight) {
+          content.style.maxHeight = null;
+        } else {
+          content.style.maxHeight = content.scrollHeight + "px";
+        }
+      });
+    }
+  </script>
+
+</body>
+
+</html>

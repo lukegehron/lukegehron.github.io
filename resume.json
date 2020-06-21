@@ -1,0 +1,204 @@
+{
+  "basics": {
+    "name": "Luke Gehron",
+    "label": "Lead Computational Designer",
+    "picture": "",
+    "email": "luke.gehron@gmail.com",
+    "phone": "(651) 560-0006",
+    "website": "http://lukegehron.github.io",
+    "summary": "A summary of John Doe...",
+    "location": {
+      "address": "8 Rollins Ct",
+      "postalCode": "MA 02120",
+      "city": "Cambridge",
+      "countryCode": "US",
+      "region": "Massachusetts"
+    },
+    "profiles": [{
+      "network": "Github",
+      "username": "lukegehron",
+      "url": "http://github.com/lukegehron"
+    }]
+  },
+  "work": [{
+    "company": "Payette",
+    "position": "Lead Computational Designer",
+    "website": "http://www.payette.com",
+    "startDate": "2017-11-01",
+    "endDate": "Current",
+    "summary": "Description...",
+    "highlights": [
+      "Started the company"
+    ]
+  },{
+    "company": "D-F-A",
+    "position": "Architectural Designer",
+    "website": "http://www.d-f-a.com",
+    "startDate": "2016-07-06",
+    "endDate": "2017-08-20",
+    "summary": "Description...",
+    "highlights": [
+      "Started the company"
+    ]
+  },{
+    "company": "KushnerSTUDIOS",
+    "position": "Junior Designer",
+    "website": "http://www.kushnerstudios.com",
+    "startDate": "2016-04-05",
+    "endDate": "2016-07-01",
+    "summary": "Description...",
+    "highlights": [
+      "Started the company"
+    ]
+  }],
+  "education": [{
+    "institution": "Boston University, MA",
+    "area": "Computer Science",
+    "studyType": "Master of Science",
+    "startDate": "2019-09-01",
+    "endDate": "2021-08-12",
+    "gpa": "3.8",
+    "courses": [
+      "CS248 - Discrete Mathematics",
+      "CS342 - Data Structures with Java",
+      "CS472 - Computer Architecture,",
+      "CS566 - Analysis of Algorithms",
+      "CS579 - Database Management with SQL",
+      "CS575 - Operating Systems",
+      "CS532 - Computer Graphics",
+      "CS601 - Web Application Development",
+      "CS602 - Server-Side Web Development",
+      "CS662 - Computer Language Theory",
+      "CS673 - Software Engineering",
+      "CS677 - Data Science with Python",
+      "CS767 - Machine Learning"
+    ]
+  },{
+    "institution": "Auburn University, AL",
+    "area": "Architecture",
+    "studyType": "Bachelor of Architecture",
+    "startDate": "2010-08-14",
+    "endDate": "2016-05-04",
+    "gpa": "3.3",
+    "courses": [
+      "COMP1010 - Intro to Computer Science",
+      "SCMH1010 - Concepts of Science",
+      "HIST1010 - World History I",
+      "HIST1020 - World History II",
+      "PHIL1040 - Business Ethics",
+      "ENGL1100 - English Composition I",
+      "ENGL1120 - English Composition II",
+      "INDD1120 - Industrial Design in Modern Society",
+      "PHYS1500 - General Physics",
+      "PSYC2010 - Intro to Psychology",
+      "ECON2030 - Pricipals of Macroeconomics",
+      "ENGL2250 - Survey of American Literature I",
+      "ENGL2260 - American Literature II",
+      "MUSI2730 - Concepts of Music Theory",
+      "BSCI2400 - Architectural Structures I",
+      "BSCI3400 - Architectural Structures II",
+      "BSCI3450 - Architectural Structures III",
+      "ARTS3530 - Scuplture as Space",
+      "ARCH1000 - Careeres in Design and Construction",  
+      "ARCH1010 - Intro to Architectural Design I",
+      "ARCH1060 - Visual Communication",
+      "ARCH1420 - Intro to Digital Media",
+      "ARCH1020 - Intro to Architectural Design II",
+      "ARCH2010 - Architectural Studio I",
+      "ARCH2110 - Arch History of the Built Enviroment",
+      "ARCH2200 - Enviromental Controls in Architecture I",
+      "ARCH2220 - Enviromental Controls in Architeture II",
+      "ARCH2020 - Architectural Studio II",
+      "ARCH3010 - Architectural Studio III",
+      "ARCH3020 - Architectural Studio IV",
+      "ARCH3110 - History of European Architecture II",
+      "ARCH3120 - Arch History 1800-Present III",
+      "ARCH3320 - Materials and Methods of Construction",
+      "ARCH3700 - Seminar in History and Theory",
+      "ARCH3800 - Seminar in Aspects of Design I",
+      "ARCH3801 - Seminar in Aspects of Design II",
+      "ARCH4010 - Architectural Studio V",
+      "ARCH4020 - Architetural Studio VI",
+      "ARCH4110 - History of Urban Architecture",
+      "ARCH4500 - Professional Practice in Architecture"
+    ]
+  },{
+    "institution": "UNITEC - NZ",
+    "area": "Study Abroad - Thesis",
+    "studyType": "Masters Level",
+    "startDate": "2015-01-15",
+    "endDate": "2015-12-01",
+    "gpa": "4.0",
+    "courses": [
+      "ARCH5010 - Architectural Studio VII",
+      "ARCH5020 - Architectural Studio VIII",
+      "ARCH5990 - Thesis Research I",
+      "ARCH5991 - Thesis Research II"
+    ]
+  }],
+  "awards": [{
+    "title": "Conference Speaker",
+    "date": "2019-10-01",
+    "awarder": "ACADIA 2019",
+    "summary": "Austin TX - Sound Space."
+  },{
+    "title": "Best Collaboration Hack",
+    "date": "2019-10-20",
+    "awarder": "AEC Tech Hackathon",
+    "summary": "NYC, NY - Bldg Ballot"
+  },{
+    "title": "Conference Paper Publication",
+    "date": "2019-06-20",
+    "awarder": "IEEE",
+    "summary": "Yale, CT - IEEE GEM"
+  },{
+    "title": "Competition Finalist",
+    "date": "2015-11-01",
+    "awarder": "FIGMENT",
+    "summary": "Governors Island, NY - DFA"
+  }],
+  "publications": [{
+    "name": "SoundSpace",
+    "publisher": "ACADIA",
+    "releaseDate": "2019-10-01",
+    "website": "http://2019.acadia.org/",
+    "summary": "Description..."
+  },{
+    "name": "SoundSpace",
+    "publisher": "ACADIA",
+    "releaseDate": "2019-10-01",
+    "website": "http://2019.acadia.org/",
+    "summary": "Description..."
+  }],
+  "skills": [{
+    "name": "Web Development",
+    "level": "Master",
+    "keywords": [
+      "HTML",
+      "CSS",
+      "Javascript",
+      "Vue",
+      "React"
+    ]
+  },{
+    "name": "Modeling/BIM",
+    "level": "Master",
+    "keywords": [
+      "Rhino",
+      "Grasshopper",
+      "Revit",
+      "Dynamo",
+      "Unity3D"
+    ]
+  },{
+    "name": "Coding",
+    "level": "Master",
+    "keywords": [
+      "Java",
+      "C#",
+      "Python",
+      "Processing",
+      "Arduino"
+    ]
+  }]
+}

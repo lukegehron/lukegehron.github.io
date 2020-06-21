@@ -1,0 +1,321 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+body {
+  margin: 1em;
+  font-family: sans-serif;
+  max-width: 1125px;
+  margin: auto;
+}
+
+img {
+  max-width: 100%;
+}
+
+h6 {
+  font-size: 13px;
+  text-align: justify;
+}
+
+h5 {
+  font-size: 17px;
+}
+
+a:link {
+  text-decoration: none;
+  font-family: 'Major Mono Display', monospace;
+  color: black;
+}
+
+a:visited {
+  text-decoration: none;
+  font-family: 'Major Mono Display', monospace;
+  color: black;
+}
+
+
+a:hover {
+  text-decoration: none;
+  font-family: 'Major Mono Display', monospace;
+}
+
+
+a:active {
+  text-decoration: none;
+  font-family: 'Major Mono Display', monospace;
+  color: black;
+}
+
+
+.title {
+  color: #222;
+  text-transform: uppercase;
+  margin: 0;
+  line-height: 1;
+  font-size: clamp(4rem, 10vw, 8rem);
+  z-index: 2;
+}
+
+.location {
+  margin: 0;
+  font-size: 1.5rem;
+  line-height: 1rem;
+  margin-bottom: 1.5em;
+}
+
+.what {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1rem;
+  margin-bottom: 1.5em;
+}
+
+.secondary-images {
+  display: flex;
+  gap: 0.5em;
+  margin-top: 0.5em;
+  max-width: 100%;
+  height: auto;
+}
+
+.secondary-image{
+  width: min(49%, 400px);
+  margin-right: 2%;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  filter: grayscale(1);
+}
+
+
+
+.main-grid{
+  line-height: 1.5;
+}
+
+@media (min-width: 768px) {
+
+  .main-grid {
+    display: grid;
+    grid-template-columns:
+      minmax(1em, 1fr)
+      repeat(2, minmax(10rem, 35rem))
+      minmax(5rem, 10rem)
+      minmax(1em, 1fr);
+    gap: 0.5em;
+    position: relative;
+  }
+
+
+  main {
+    grid-column: 2 / 5;
+    display: grid;
+    grid-auto-flow: dense;
+  }
+
+  .title {
+    grid-column: 1 / 3;
+    grid-row: 1;
+  }
+
+  .description {
+    grid-column: 1;
+    padding-right: 2em;
+    font-size: 14px;
+    margin-top: 20px;
+    grid-row: 5 / 7;
+  }
+
+  .location,
+  .what {
+    line-height: 1rem;
+    grid-column: 1;
+    padding-right: 2em;
+    margin-top: 2rem;
+  }
+
+  .description::after {
+    font-size: 50vw;
+    position: absolute;
+    opacity: 0.2;
+    z-index: -100;
+    line-height: 1;
+    left: -0.15em;
+    top: 0;
+  }
+
+  .primary-image {
+    grid-column: 2 / 4;
+    grid-row: 1 / span 4;
+    z-index: 1;
+    height: max(300px, 100%);
+    width: 100%;
+    max-height: 500px;
+    width: min(100%, 1000px);
+    object-fit: cover;
+  }
+
+  .secondary-image{
+    z-index: 1;
+    width: min(49%, 400px);
+    max-width: 100%;
+    height: auto;
+  }
+
+  .secondary-images {
+    grid-row: 5 ;
+    /* top: 0.5em; */
+    grid-column: 2 / 4;
+    margin-top: 8em;
+    width: 100%;
+    object-fit: cover;
+    
+  }
+}
+
+@media (min-width: 1200px) {
+  main::after {
+    grid-column: 3 / 4;
+  }
+
+  .secondary-images {
+    grid-column: 2 / 4;
+    margin-top: 0.5em;
+  }
+}
+
+
+
+.basic-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  max-width: 1100px;
+  margin: auto;
+  margin-top: 40px;
+  align-items: center;
+  justify-items: center;
+}
+
+.card{
+align-self: center;
+align-content: center;
+}
+
+#name {
+text-align: justify;
+}
+
+#about {
+text-align: justify;
+font-size: 12px;
+}
+
+.hovereffect {
+width: 100%;
+height: 100%;
+overflow: hidden;
+position: relative;
+}
+
+.hovereffect .textover {
+width: 100%;
+height: 100%;
+position: absolute;
+overflow: hidden;
+background-color: rgba(255, 255, 255, 0.9);
+opacity: 0;
+}
+
+.hovereffect:hover .textover {
+opacity: 1;
+top: 0px;
+border-style: none;
+text-align: center;
+}
+
+.threeline {
+padding-top: 0px;
+}
+
+
+.twoline {
+padding-top: 10%;
+}
+
+.info {
+font-size: 68px;
+line-height: 150%;
+vertical-align: middle;
+}
+
+
+@media (min-width: 496px) {
+.hovereffect a.info {
+  font-size: 40px;
+  line-height: 150%;
+  vertical-align: middle;
+}
+}
+
+
+@media (min-width: 768px) {
+.hovereffect a.info {
+  font-size: 40px;
+  line-height: 150%;
+  vertical-align: middle;
+}
+}
+
+
+@media (min-width: 992px) {
+.hovereffect a.info {
+  font-size: 40px;
+  line-height: 150%;
+  vertical-align: middle;
+}
+}
+
+
+@media (min-width: 1200px) {
+.hovereffect a.info {
+  font-size: 40px;
+  line-height: 150%;
+  vertical-align: middle;
+}
+}
+
+h3 {
+font-family: 'Major Mono Display', monospace;
+font-size: 40px;
+color: #000;
+}
+
+
+.about{
+  max-width: 600px;
+  font-size: 16px;
+}
+
+.basic-grid1 {
+    display: grid;
+    /* gap: 1rem; */
+    /* grid-template-columns: 1fr 1fr; */
+    max-width: 1100px;
+    margin: auto;
+    margin-top: 40px;
+    padding-left: 1em;
+    align-items: center;
+    justify-items: center;
+
+    /* display: grid; */
+    grid-template-columns:
+      minmax(1em, 1fr)
+      minmax(1em, 1fr);
+    gap: 0.5em;
+    position: relative;
+ }
