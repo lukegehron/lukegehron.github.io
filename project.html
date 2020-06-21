@@ -116,7 +116,7 @@
             <span>{{d}}</span><br>
           </p>
         </span>
-        <span class="backgroundIMG"></span>
+        <span class="backgroundIMG" ></span>
 
       </main>
 
@@ -125,10 +125,11 @@
     <section class="basic-grid" style="top: 0px; margin-top: 10px;">
       <div class="card" v-for="i in images">
         <div class="hovereffect">
-          <img class="img-responsive" :src="i" :alt="name">
+          <img class="img-responsive" :src="i" :alt="name" style="filter:invert(100%) hue-rotate(.5turn); border: none;">
         </div>
       </div>
     </section>
+    <br>
 
     <section class="section">
       <header>
@@ -172,15 +173,16 @@
               "XR technologies enable us to visualize things that are intangible, and we want to take advantage of this opportunity to enhance the process of designing for design elements that are inherently non-visual. These tools can influence design in a new way, and provides architects with a visual tool to be more sensitive and aware of the acoustic impacts of their different design options."
             ],
             images: [
-              'images/SoundSpace2.jpg',
-              'images/SoundSpace2.jpg',
-              'images/SolarTool3.jpg',
-              'images/SoundSpace2.jpg'
+              'project/Soundwave1.png',
+              'project/Soundwave2.png',
+              'project/Soundwave3.png',
+              'project/Soundwave4.png'
             ],
             skills: [
               "Rhino",
               "Grasshopper"
-            ]
+            ],
+            title: 'SOUND SPACE '
           },
           {
             id: 2,
@@ -214,6 +216,7 @@
           this.desc = project.desc
           this.images = project.images
           this.skills = project.skills
+          this.title = project.title
         }
       },
       created: function () {
@@ -225,6 +228,7 @@
         var res = res[1];
 
         this.updateProject(this.project[res])
+        document.title = "LUKE GEHRON // " + this.title
 
       }
 

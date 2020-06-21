@@ -28,11 +28,12 @@
       "countryCode": "US",
       "region": "MA",
     "startDate": "Nov 2017",
-    "summary": "Description...",
+    "summary": "Project support, creating VR / AR interactive visualizations, parametric and data driven development and scripting.",
     "highlights": [
-      "Started the company",
-      "Started the company",
-      "Started the company"
+      "Interactive Web Tools",
+      "AR / VR / Projection Mapping",
+      "Dynamo / Grasshopper",
+      "Python / C# Scripting"
     ]
   },{
     "company": "D-F-A",
