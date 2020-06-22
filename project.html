@@ -14,14 +14,30 @@
     @media (min-width: 768px) {
 
       .backgroundIMG {
-        content: url(images/SoundSp1.jpg);
+
         position: absolute;
         max-width: 100%;
         z-index: -100;
-        opacity: 0.3;
+        opacity: 0.1;
         margin-left: -15%;
       }
     }
+
+    #header > #profiles,
+#header > #contact,
+#skills,
+#languages,
+#interests {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+}
 
     .section {
       font-family: sans-serif;
@@ -87,48 +103,53 @@
       font-size: 0.9rem;
     }
 
-    .keywords{
+    .keywords {
       font-family: sans-serif;
-color: #40484f;
-font-weight: 400;
-letter-spacing: 0;
-line-height: 1.46153846;
-text-align: left;
-font-size: 12px;
-padding: 0;
-border: 0;
-list-style: none;
-display: inline;
-margin: .1em;
-width: 15em;
+      color: #40484f;
+      font-weight: 400;
+      letter-spacing: 0;
+      line-height: 1.46153846;
+      text-align: left;
+      font-size: 12px;
+      padding: 0;
+      border: 0;
+      list-style: none;
+      display: inline;
+      margin: .1em;
+      width: 15em;
     }
 
     ul {
-  /* display: inline; */
-  list-style: none;
-}
+      /* display: inline; */
+      list-style: none;
+    }
 
-li {
-  list-style-type: square;
-  list-style-position: outside;
-  margin-left: 1.3em;
-  font-family: sans-serif;
-font-weight: 400;
-letter-spacing: 0;
-list-style: none;
-list-style-type: square;
-list-style-position: outside;
-display: inline;
-margin: 2px 2px 2px 0;
-padding: 4px 5px 5px;
-font-size: 0.9rem;
-line-height: 1;
-color: #666;
-background-color: #eee;
-border: 0 solid #eee;
-border-radius: 3px;
-white-space: nowrap;
-}
+    li {
+      list-style-type: square;
+      list-style-position: outside;
+      margin-left: 1.3em;
+      font-family: sans-serif;
+      font-weight: 400;
+      letter-spacing: 0;
+      list-style: none;
+      list-style-type: square;
+      list-style-position: outside;
+      display: inline;
+      margin: 2px 2px 2px 0;
+      padding: 4px 5px 5px;
+      font-size: 0.9rem;
+      line-height: 1;
+      color: #666;
+      background-color: #eee;
+      border: 0 solid #eee;
+      border-radius: 3px;
+      white-space: nowrap;
+    }
+
+    .item{
+      margin-right: 50px;
+    }
+
   </style>
   <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
   <script src="titlebar.js"></script>
@@ -149,13 +170,18 @@ white-space: nowrap;
       <main>
         <h1 class="title">{{name}}</h1>
         <span class="location">{{location}}<br><br>
-          <span class="what">An Acoustic Simulation Tool to Visualize Sound Waves in VR.
+          <span class="what">{{subHeading}}
           </span></span>
+          <span class="primary-image" v-if="img1" width=100%>
+            <img :src="img1" width=100% class="primary-image"></img>
+          </span>
+          <span v-else class="primary-image" width=100%>
         <iframe width="100%" height="360px" :src="vid1"
           allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
           style="filter:invert(100%) hue-rotate(.5turn); border: none;" frameborder="0px"
           class="primary-image"></iframe>
         <!-- <iframe src="https://player.vimeo.com/video/367768436" width="100%" height="360px" allowfullscreen class="primary-image" style="background-color: black;"></iframe> -->
+      </span>
         <div class="secondary-images">
           <img :src="img2[0]" alt="" class="secondary-image">
           <img :src="img2[1]" alt="" class="secondary-image">
@@ -165,7 +191,8 @@ white-space: nowrap;
             <span>{{d}}</span><br>
           </p>
         </span>
-        <span class="backgroundIMG" ></span>
+        <span class="backgroundIMG" v-bind:style="{ content: content }"></span>
+
 
       </main>
 
@@ -174,7 +201,8 @@ white-space: nowrap;
     <section class="basic-grid" style="top: 0px; margin-top: 10px;">
       <div class="card" v-for="i in images">
         <div class="hovereffect">
-          <img class="img-responsive" :src="i" :alt="name" style="filter:invert(100%) hue-rotate(.5turn); border: none;">
+          <img class="img-responsive" :src="i" :alt="name"
+            >
         </div>
       </div>
     </section>
@@ -186,11 +214,19 @@ white-space: nowrap;
       </header>
       <section id="skills">
         <div class="item">
-          <h3 class="name">
-            Technologies:
+          <h3 class="name" >
+            Technology used
           </h3>
           <ul class="keywords" v-for="skill in skills">
             <li>{{skill}}</li>
+          </ul>
+        </div>
+        <div class="item">
+          <h3 class="name">
+            Team
+          </h3>
+          <ul class="keywords" v-for="person in team">
+            <li>{{person}}</li>
           </ul>
         </div>
       </section>
@@ -205,7 +241,7 @@ white-space: nowrap;
       data: {
         project: [
           {
-            id: 1,
+            id: 0,
             name: 'Sound Space',
             image: '../images/SoundSp1.jpg',
             location: 'Cambridge, MA // 2019',
@@ -222,10 +258,10 @@ white-space: nowrap;
               "XR technologies enable us to visualize things that are intangible, and we want to take advantage of this opportunity to enhance the process of designing for design elements that are inherently non-visual. These tools can influence design in a new way, and provides architects with a visual tool to be more sensitive and aware of the acoustic impacts of their different design options."
             ],
             images: [
-              'project/Soundwave1.png',
-              'project/Soundwave2.png',
-              'project/Soundwave3.png',
-              'project/Soundwave4.png'
+              'project/SW1.png',
+              'project/SW2.png',
+              'project/SW3.png',
+              'project/SW4.png'
             ],
             skills: [
               "Rhino",
@@ -234,7 +270,82 @@ white-space: nowrap;
               "C#",
               "HTC Vive"
             ],
-            title: 'SOUND SPACE '
+            team: [
+              "Christopher Morse",
+              "Adam Chernick",
+              "Sabrina Noumoviski",
+              "Zeyu Ren"
+            ]
+          }, {
+            id: 1,
+            name: 'Solar Comfort Tool',
+            image: '../images/SolarTool3.jpg',
+            location: 'Boston, MA // 2018',
+            subHeading: 'A tool showing the impact of shade and glazing geometry on indoor occupant discomfort from direct sun.',
+            img1: 'project/SCT1.png',
+            vid1: "https://www.youtube.com/embed/3bQfJdd1CYg",
+            img2: [
+              "project/SCT7.png",
+              "project/SCT8.png"
+            ],
+            img3: [],
+            desc: [
+              "A web visualization built in Javascipt to show the impact of direct sun on a variety of room designs. The open source app provides architects with a visual tool to be more aware of the solar impacts of their different facade designs.",
+              "Below the visualization are a number of numeric inputs for chosing a building location, orientation, and all room, window, and sun shade geometry. There are several different simulation options to enable designers to see the impact over 1 hour, a specifc day, or an entire year. These tools can influence design in a new way, and provides architects with a visual tool to be more sensitive and aware of the solar impacts of their different design options."
+            ],
+            images: [
+              'project/SCT3.png',
+              'project/SCT2.png',
+              'project/SCT4.png',
+              'project/SCT5.png'
+            ],
+            skills: [
+              "HTML",
+              "CSS",
+              "Javascript",
+              "Bootstrap 4",
+              "p5.js",
+              "D3.js"
+            ],
+            team: [
+              "Payette Building Science Group"
+            ]
+          },{
+            id: 2,
+            name: 'Acoustic Analysis Tool',
+            image: '../images/SoundSpace2.jpg',
+            location: 'Boston, MA // 2018',
+            subHeading: 'A tool showing the impact of single point source acoustics in a room.',
+            img1: 'project/AcousticTool.jpg',
+            vid1: "https://www.youtube.com/embed/3bQfJdd1CYg",
+            img2: [
+              "project/A1.png",
+              "project/A2.png"
+            ],
+            img3: [],
+            desc: [
+              "A web visualization built in Javascipt to show the impact of direct sun on a variety of room designs. The open source app provides architects with a visual tool to be more aware of the solar impacts of their different facade designs.",
+              "Below the visualization are a number of numeric inputs for chosing a building location, orientation, and all room, window, and sun shade geometry. There are several different simulation options to enable designers to see the impact over 1 hour, a specifc day, or an entire year. These tools can influence design in a new way, and provides architects with a visual tool to be more sensitive and aware of the solar impacts of their different design options."
+            ],
+            images: [
+              "project/A3.png",
+              "project/A4.png",
+              "project/A5.png",
+              "project/A6.png",
+              "project/A7.png",
+              "project/A8.png",
+              "project/A9.png",
+              "project/A10.png",
+            ],
+            skills: [
+              "Rhino",
+              "Grasshopper",
+              "Python",
+              "C#"
+            ],
+            team: [
+              "Payette Research Group"
+            ]
           },
           {
             id: 2,
@@ -268,7 +379,9 @@ white-space: nowrap;
           this.desc = project.desc
           this.images = project.images
           this.skills = project.skills
-          this.title = project.title
+          this.title = project.name.toUpperCase()
+          this.content = 'url(' + project.image + ')'
+          this.team = project.team
         }
       },
       created: function () {
