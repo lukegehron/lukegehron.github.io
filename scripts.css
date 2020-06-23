@@ -1,0 +1,145 @@
+.collapsible {
+  background-color: #eee;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.first {
+  border-radius: 8px 8px 0px 0px;
+}
+
+.last {
+  border-radius: 0px 0px 8px 8px;
+}
+
+.only {
+  border-radius: 8px;
+}
+
+.active,
+.collapsible:hover {
+  background-color: #ccc;
+}
+
+.collapsible:after {
+  content: '\002B';
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: #f1f1f1;
+}
+
+.collapse {
+  max-width: 1100px;
+  margin: auto;
+}
+
+.clickable{
+  font-family: sans-serif;
+font-size: 16px;
+color: #666;
+font-weight: 400;
+letter-spacing: 0;
+line-height: 1.46153846;
+text-align: left;
+margin-bottom: 10px;
+-webkit-text-size-adjust: 100%;
+
+}
+
+.section {
+  font-family: sans-serif;
+  color: #40484f;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.46153846;
+  text-align: left;
+  font-size: 12px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.section>header {
+  font-family: sans-serif;
+  color: #40484f;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.46153846;
+  text-align: left;
+  font-size: 12px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  display: block;
+  position: relative;
+}
+
+.section-title {
+  font-family: sans-serif;
+  letter-spacing: 0;
+  line-height: 1.46153846;
+  text-align: left;
+  margin: 0;
+  display: inline-block;
+  background: #fff;
+  padding: 0 1em 0.3em 0;
+  color: #666;
+  text-transform: uppercase;
+  font-weight: 600;
+  border: none;
+  font-size: 0.9rem;
+}
+
+.section>header::after {
+  position: absolute;
+  left: 0;
+  top: 0.7em;
+  height: 1px;
+  background: #ccc;
+  content: "";
+  width: 100%;
+  z-index: -100;
+  display: block;
+}
+
+a:link {
+text-decoration: none;
+color: black;
+}
+
+a:visited {
+text-decoration: none;
+color: black;
+}
+
+
+a:hover {
+color: #fff;
+background-color: #000;
+padding: 2px 4px 2px 4px; 
+text-decoration: none;
+}
+
+a:active {
+text-decoration: none;
+color: black;
+}

@@ -11,170 +11,13 @@
     /* @import url('project/css/styles.css'); */
     @import url('./nav.css');
     @import url('./print.css');
+    @import url('./scripts.css');
   </style>
   <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
   <script src="titlebar.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/postscribe/2.0.6/postscribe.min.js"></script>
   <style>
-    .collapsible {
-      background-color: #eee;
-      cursor: pointer;
-      padding: 18px;
-      width: 100%;
-      border: none;
-      /* border-top: 1px;
-      border-bottom: 1px; */
-      text-align: left;
-      outline: none;
-      font-size: 15px;
-    }
-
-    .first {
-      border-radius: 8px 8px 0px 0px;
-    }
-
-    .last {
-      border-radius: 0px 0px 8px 8px;
-    }
-
-    .only {
-      border-radius: 8px;
-    }
-
-    .active,
-    .collapsible:hover {
-      background-color: #ccc;
-    }
-
-    .collapsible:after {
-      content: '\002B';
-      /* content: '\f0d7'; */
-      /* color: white; */
-      font-weight: bold;
-      float: right;
-      margin-left: 5px;
-    }
-
-    .active:after {
-      content: "\2212";
-      /* content: '\f0da'; */
-    }
-
-    .content {
-      padding: 0 18px;
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.2s ease-out;
-      background-color: #f1f1f1;
-    }
-
-    .collapse {
-      max-width: 1100px;
-      margin: auto;
-    }
-
-    .clickable{
-      /* margin: 15px; */
-      /* padding: 15px; */
-      font-family: sans-serif;
-  font-size: 16px;
-  color: #666;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.46153846;
-  text-align: left;
-  margin-bottom: 10px;
-  -webkit-text-size-adjust: 100%;
-
-    }
-
-    .section {
-      font-family: sans-serif;
-      color: #40484f;
-      font-weight: 400;
-      letter-spacing: 0;
-      line-height: 1.46153846;
-      text-align: left;
-      font-size: 12px;
-      margin: 0;
-      padding: 0;
-      border: 0;
-      display: block;
-      margin-bottom: 1rem;
-    }
-
-    .section>header {
-      font-family: sans-serif;
-      color: #40484f;
-      font-weight: 400;
-      letter-spacing: 0;
-      line-height: 1.46153846;
-      text-align: left;
-      font-size: 12px;
-      margin: 0;
-      padding: 0;
-      border: 0;
-      display: block;
-      position: relative;
-    }
-
-    .section-title {
-      font-family: sans-serif;
-      letter-spacing: 0;
-      line-height: 1.46153846;
-      text-align: left;
-      margin: 0;
-      display: inline-block;
-      background: #fff;
-      padding: 0 1em 0.3em 0;
-      color: #666;
-      text-transform: uppercase;
-      font-weight: 600;
-      border: none;
-      font-size: 0.9rem;
-    }
-
-    .section>header::after {
-      position: absolute;
-      left: 0;
-      top: 0.7em;
-      height: 1px;
-      background: #ccc;
-      content: "";
-      width: 100%;
-      z-index: -100;
-      display: block;
-    }
-
-    a:link {
-  text-decoration: none;
-  /* font-family: 'Major Mono Display', monospace; */
-
-  color: black;
-}
-
-a:visited {
-  text-decoration: none;
-  /* font-family: 'Major Mono Display', monospace; */
-  color: black;
-}
-
-
-a:hover {
-  color: #fff;
-  background-color: #000;
-  /* text-transform: uppercase; */
-  padding: 2px 4px 2px 4px; 
-  text-decoration: none;
-}
-
-
-
-a:active {
-  text-decoration: none;
-  /* font-family: 'Major Mono Display', monospace; */
-  color: black;
-}
+ 
   </style>
 </head>
 
@@ -185,8 +28,6 @@ a:active {
 
     <br><br><br><br>
     <div class="collapse">
-
-      <!-- <section>HTML/CSS/Javascript Scripts:</section> -->
 
       <section class="section">
         <header>
@@ -203,7 +44,6 @@ a:active {
           <span class="clickable">
             <a :href="web.website"> Visit {{ web.name }} Website </a><br>
           </span>
-          
           
           <div :id="web.divName"></div>
 
@@ -334,9 +174,7 @@ a:active {
 
       }
     });
-  </script>
 
-  <script>
     var coll = document.getElementsByClassName("collapsible");
     var i;
 

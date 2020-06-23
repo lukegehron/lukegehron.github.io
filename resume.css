@@ -445,6 +445,31 @@ section .location {
   margin-bottom: 0.5rem;
 }
 
+.collapsible {
+  width: 100%;
+  cursor: pointer;
+}
+
+
+.collapsible:after {
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+
+.content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.collapse {
+  max-width: 1100px;
+  margin: auto;
+}
+
 /******************
 *	HELPER CLASSES
 ******************/

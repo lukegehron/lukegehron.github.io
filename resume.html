@@ -5,38 +5,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display" rel="stylesheet">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css">
 
   <title>LUKE GEHRON // RESUME</title>
   <style>
-
     @import url('./resume.css');
     @import url('./nav.css');
-
-    .collapsible {
-      width: 100%;
-      cursor: pointer;
-    }
-  
-
-    .collapsible:after {
-      font-weight: bold;
-      float: right;
-      margin-left: 5px;
-    }
-
-
-    .content {
-      padding: 0 18px;
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.2s ease-out;
-    }
-
-    .collapse {
-      max-width: 1100px;
-      margin: auto;
-    }
   </style>
   <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
   <script src="titlebar.js"></script>
@@ -280,7 +253,6 @@
     readTextFile("resume2.json", function (text) {
 
       var jsonData = JSON.parse(text);
-      // console.log(data1.basics.picture);
 
       var app = new Vue({
         el: '#app',
