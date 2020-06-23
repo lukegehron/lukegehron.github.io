@@ -44,11 +44,12 @@
       "region": "NY",
     "startDate": "Aug 2016",
     "endDate": "Oct 2017",
-    "summary": "Description...",
+    "summary": "Competition work and several storefronts for a high end furniture retailer.",
     "highlights": [
-      "Started the company",
-      "Started the company",
-      "Started the company"
+      "Renderings / Presentation Grahics",
+      "Competiion Projects",
+      "SD, DD, and CD Sets",
+      "3D Printing / Fabrication"
     ]
   },{
     "company": "KushnerSTUDIOS",
@@ -59,11 +60,11 @@
       "region": "NY",
     "startDate": "May 2016",
     "endDate": "Aug 2016",
-    "summary": "Description...",
+    "summary": "Developed Grasshopper scripts for a 3D printed pool complex, and created the DD set for a large apartment building",
     "highlights": [
-      "Started the company",
-      "Started the company",
-      "Started the company"
+      "Commercial Space Drafting",
+      "Survey Existing Conditions",
+      "Parametric Design"
     ]
   },{
     "company": "Auburn University",
@@ -74,11 +75,10 @@
       "region": "AL",
     "startDate": "Sept 2015",
     "endDate": "Oct 2015",
-    "summary": "Description...",
+    "summary": "Lead a series of classes on upskilling Rhino and Grasshopper competencies",
     "highlights": [
-      "Started the company",
-      "Started the company",
-      "Started the company"
+      "Rhino / Grasshopper",
+      "Photoshop / Rendering"
     ]
   }],
   "education": [{

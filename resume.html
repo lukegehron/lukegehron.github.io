@@ -6,14 +6,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css">
-  
+
   <title>LUKE GEHRON // RESUME</title>
   <style>
-    /* @import url('project/css/styles.css'); */
 
-    /* @import url('./print.css'); */
     @import url('./resume.css');
     @import url('./nav.css');
+
+    .collapsible {
+      width: 100%;
+      cursor: pointer;
+    }
+  
+
+    .collapsible:after {
+      font-weight: bold;
+      float: right;
+      margin-left: 5px;
+    }
+
+
+    .content {
+      padding: 0 18px;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.2s ease-out;
+    }
+
+    .collapse {
+      max-width: 1100px;
+      margin: auto;
+    }
   </style>
   <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
   <script src="titlebar.js"></script>
@@ -21,224 +44,222 @@
 
 <body>
   <div id="app">
-    <titlebar></titlebar> 
+    <titlebar></titlebar>
 
     <div id="resume">
       <br>
+      <div class="collapse">
 
 
-      <header id="header" class="clear">
-        <img class="image" :src="basics.picture" :alt="basics.name" />
-        <div class="middle">
-          <!-- <h1 class="name">{{basics.name}}</h1> -->
-          <h2 class="label">{{basics.label}}</h2>
-        </div>
-
-
-        <span class="location">
-          <span class="address">{{basics.location.address}},</span>
-          <span class="city">{{basics.location.city}},</span>
-          <span class="postalCode">{{basics.location.postalCode}} </span>
-          <span class="region">{{basics.location.region}},</span>
-          <span class="countryCode">{{basics.location.countryCode}}</span>
-        </span>
-
-        <div id="contact">
-          <div class="website">
-            <span class="fas fa-external-link-alt"></span>
-            <a target="_blank" target="_blank" :href="basics.website">{{basics.website}}</a>
+        <header id="header" class="clear">
+          <img class="image" :src="basics.picture" :alt="basics.name" />
+          <div class="middle">
+            <h2 class="label">{{basics.label}}</h2>
           </div>
-          <div class="email">
-            <span class="far fa-envelope"></span>
-            <a :href="basics.email">{{basics.email}}</a>
-          </div>
-          <div class="phone">
-            <span class="fas fa-mobile-alt"></span>
-            <a :href="basics.phone">{{basics.phone}}</a>
-          </div>
-        </div>
 
-      </header>
-    
-      
-      <section class="section">
-        <section class="main-summary">
-          <div>{{basics.summary}}</div>
+
+          <span class="location">
+            <span class="address">{{basics.location.address}},</span>
+            <span class="city">{{basics.location.city}},</span>
+            <span class="postalCode">{{basics.location.postalCode}} </span>
+            <span class="region">{{basics.location.region}},</span>
+            <span class="countryCode">{{basics.location.countryCode}}</span>
+          </span>
+
+          <div id="contact">
+            <div class="website">
+              <span class="fas fa-external-link-alt"></span>
+              <a target="_blank" target="_blank" :href="basics.website">{{basics.website}}</a>
+            </div>
+            <div class="email">
+              <span class="far fa-envelope"></span>
+              <a :href="basics.email">{{basics.email}}</a>
+            </div>
+            <div class="phone">
+              <span class="fas fa-mobile-alt"></span>
+              <a :href="basics.phone">{{basics.phone}}</a>
+            </div>
+          </div>
+
+        </header>
+
+
+        <section class="section">
+          <section class="main-summary">
+            <div>{{basics.summary}}</div>
+          </section>
         </section>
-      </section>
-
-     
-<section class="section">
-	<header>
-		<h2 class='section-title'>Skills</h2>
-	</header>
-	<section id="skills">
-		<div class="item" v-for="skill in skills" >
-			<h3 class="name">
-				{{skill.name}}
-      </h3>
-			<ul class="keywords" v-for="keyword in skill.keywords">
-				<li>{{keyword}}</li>
-			</ul>
-		</div>
-	</section>
-</section>
 
 
-<section class="section">
-  <header>
-    <h2 class='section-title'>Work Experience <span class="item-count">({{work.length}})</span></h2>
-  </header>
-
-  <section id="work">
-    <section class="work-item" v-for="(job, index) in work">
-        <input v-if="index == 0" :id="work-index" type="checkbox" class="toggle-item" checked="checked" />
-        <input v-else :id="work-index" type="checkbox" class="toggle-item" />
-        <label :for="work-index"></label>
-
-			<header class="clear">
-				<div class="position">{{job.position}}</div>
-				<div class="company">{{job.company}}</div>
-				<div class="date">
-				  <span class="startDate">{{job.startDate}}</span>
-					<span v-if="job.endDate" class="endDate">- {{job.endDate}}</span>
-					<span v-else class="endDate">- Current</span>
-				</div>
-			</header>
-
-			<span class="location">
-				<span class="fas fa-map-marker-alt"></span>
-				<span class="city">{{job.city}},</span>
-				<span class="region">{{job.region}}</span>
-			</span>
-
-    	<span class="website">
-    		<a target="_blank" :href="job.website">{{job.website}}</a>
-    	</span>
-    	<ul class="keywords" v-for="keyword in job.keywords">
-				<li>{{keyword}}</li>
-			</ul>
-    	<div class="item" id="work-item">
-        <div class="summary">{{job.summary}}</div>
-        <ul class="highlights" v-for="highlight in job.highlights">
-            <li>{{highlight}}</li>
-        </ul>
-    	</div>
-    </section>
-  </section>
-</section>
-
-<section class="section">
-  <header>
-    <h2 class='section-title'>Education <span class="item-count">({{education.length}})</span></h2>
-  </header>
-
-  <section id="education">
-    <section class="education-item" v-for="(school, index) in education">
-        <input :id="education-index" type="checkbox" checked="checked" class="toggle-item" />
-        <label :for="education-index"></label>
-      <header class="clear">
-        <div class="header-left">
-          <div class="position">
-            {{school.studyType}}
-          </div>
-          <div class="position">
-            {{school.area}}
-          </div>
-          <div class="company">
-            {{school.institution}}
-          </div>
-        </div>
-        <div class="date">
-          <span class="startDate">
-          {{school.startDate}}
-          </span>
-          <span class="endDate">
-          - {{school.endDate}}
-          </span>
-        </div>
-      </header>
+        <section class="section">
+          <header>
+            <h2 class='section-title'>Skills</h2>
+          </header>
+          <section id="skills">
+            <div class="item" v-for="skill in skills">
+              <h3 class="name">
+                {{skill.name}}
+              </h3>
+              <ul class="keywords" v-for="keyword in skill.keywords">
+                <li>{{keyword}}</li>
+              </ul>
+            </div>
+          </section>
+        </section>
 
 
-      <ul class="courses" v-for="course in school.courses">
-        <li>{{course}}</li>
-      </ul>
 
 
-      <div class="item">
-        <div class='gpa'>
-          <strong> GPA:</strong> <span>{{school.gpa}}</span>
-        </div>
-          <div class="summary">{{school.summary}}</div>
+        <section class="section">
+          <header>
+            <h2 class='section-title'>Work Experience <span class="item-count">({{work.length}})</span></h2>
+          </header>
+
+                <section id="work">
+          <section class="work-item" v-for="(job, index) in work">
+              <!-- <input v-if="index == 0" :id="work-index" type="checkbox" class="toggle-item" checked="checked" /> -->
+              <input :id="work-index" type="checkbox" class="toggle-item" />
+              
+              <label :for="work-index"></label>
+
+              <section class="collapsible" v-on:click="method_1($event.type, index)">
+
+            <header class="clear" >
+
+              <div class="position">{{job.position}}</div>
+              <div class="company">{{job.company}}</div>
+              <div class="date">
+                <span class="startDate">{{job.startDate}}</span>
+                <span v-if="job.endDate" class="endDate">- {{job.endDate}}</span>
+                <span v-else class="endDate">- Current</span>
+              </div>
+            </header>
+
+            <span class="location">
+              <span class="fas fa-map-marker-alt"></span>
+              <span class="city">{{job.city}},</span>
+              <span class="region">{{job.region}}</span>
+            </span>
+
+            <span class="website">
+              <a target="_blank" :href="job.website">{{job.website}}</a>
+            </span>
+
+            <div class="item content" :id="index">
+              <div class="summary">{{job.summary}}</div>
+              <ul class="highlights" v-for="highlight in job.highlights">
+                  <li>{{highlight}}</li>
+              </ul>
+            </div>
+          </section>
+          </section>
+        </section>
+        </section>
+
+        <section class="section">
+          <header>
+            <h2 class='section-title'>Education <span class="item-count">({{education.length}})</span></h2>
+          </header>
+
+          <section id="education">
+            <section class="education-item" v-for="(school, index) in education">
+              <input :id="education-index" type="checkbox" checked="checked" class="toggle-item" />
+              <label :for="education-index"></label>
+              <header class="clear">
+                <div class="header-left">
+                  <div class="position">
+                    {{school.studyType}}
+                  </div>
+                  <div class="position">
+                    {{school.area}}
+                  </div>
+                  <div class="company">
+                    {{school.institution}}
+                  </div>
+                </div>
+                <div class="date">
+                  <span class="startDate">
+                    {{school.startDate}}
+                  </span>
+                  <span class="endDate">
+                    - {{school.endDate}}
+                  </span>
+                </div>
+              </header>
+
+
+              <ul class="courses" v-for="course in school.courses">
+                <li>{{course}}</li>
+              </ul>
+
+
+              <div class="item">
+                <div class='gpa'>
+                  <strong> GPA:</strong> <span>{{school.gpa}}</span>
+                </div>
+                <div class="summary">{{school.summary}}</div>
+              </div>
+            </section>
+          </section>
+        </section>
+
+        <section class="section">
+          <header>
+            <h2 class='section-title'>Events</h2>
+          </header>
+          <section id="awards" v-for="(award, index) in awards">
+            <section class="award-item">
+              <input :id="award-index" type="checkbox" class="toggle-item" checked="checked" />
+              <label :for="award-index"></label>
+
+              <header class="clear">
+                <div class="header-left">
+                  <div class="position">
+                    {{award.awarder}}
+                  </div>
+                  <div class="company">
+                    {{award.title}}
+                  </div>
+                </div>
+                <div class="date">
+                  {{award.date}}
+                </div>
+              </header>
+
+              <div class="item">
+                <div class="summary">{{award.summary}}</div>
+              </div>
+            </section>
+          </section>
+        </section>
+
+        <section class="section">
+          <header>
+            <h2 class='section-title'>Recognition</h2>
+          </header>
+          <section id="publications" v-for="(publication, index) in publications">
+            <section class="publication-item">
+              <input :id="publication-index" type="checkbox" class="toggle-item" checked="checked" />
+              <label :for="publication-index"></label>
+
+              <header class="clear">
+                <div class="header-left">
+                  <span class="position">
+
+                    {{publication.name}}
+                  </span>
+                  <span class="company">
+                    {{publication.publisher}}
+                  </span>
+                </div>
+                <span class="date">
+                  {{publication.releaseDate}}
+                </span>
+              </header>
+            </section>
+          </section>
+        </section>
       </div>
-    </section>
-  </section>
-</section>
-
-<section class="section">
-  <header>
-    <h2 class='section-title'>Events</h2>
-  </header>
-  <section id="awards" v-for="(award, index) in awards">
-    <section class="award-item">
-        <input v-if="index == 0" :id="award-index" type="checkbox" class="toggle-item" checked="checked" />
-        <input v-else :id="award-index" type="checkbox" class="toggle-item" />
-        <label :for="award-index"></label>
-
-      <header class="clear">
-        <div class="header-left">
-          <div class="position">
-            {{award.awarder}}
-          </div>
-          <div class="company">
-            {{award.title}}
-          </div>
-        </div>
-        <div class="date">
-          {{award.date}}
-        </div>
-      </header>
-      
-      <div class="item">
-          <div class="summary">{{award.summary}}</div>
-      </div>
-    </section>
-  </section>
-</section>
-
-<section class="section">
-  <header>
-    <h2 class='section-title'>Recognition</h2>
-  </header>
-  <section id="publications" v-for="(publication, index) in publications">
-    <section class="publication-item">
-        <input v-if="index == 0" :id="publication-index" type="checkbox" class="toggle-item" checked="checked" />
-        <input v-else :id="publication-index" type="checkbox" class="toggle-item" />
-        <label :for="publication-index"></label>
-
-      <header class="clear">
-        <div class="header-left">
-          <span class="position">
-          
-          {{publication.name}}
-          </span>
-          <span class="company">
-          {{publication.publisher}}
-          </span>
-        </div>
-        <span class="date">
-        {{publication.releaseDate}}
-        </span>
-      </header>
-    </section>
-  </section>
-</section>
-
-      
-    
-      
-
-
     </div>
   </div>
 
@@ -263,12 +284,29 @@
 
       var app = new Vue({
         el: '#app',
-        data: jsonData
+        data: jsonData,
+        methods: {
+          method_1: function(ev, i){
+        var content = document.getElementById(i);
+        if (content.style.maxHeight) {
+          content.style.maxHeight = null;
+        } else {
+          content.style.maxHeight = content.scrollHeight + "px";
+        }
+          }
+        },
+        mounted: function(){
+          var content = document.getElementById(0);
+          content.style.maxHeight = content.scrollHeight + "px";
+
+        }
       });
     });
 
 
   </script>
+
+
 
 </body>
 

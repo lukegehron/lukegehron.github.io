@@ -347,8 +347,6 @@ section .location {
 .language,
 .name {
   font-weight: 600;
-  /* font-size: medium; */
-  
 }
 
 .position{
@@ -358,20 +356,12 @@ section .location {
   font-size: 1.1em;
 }
 
-.company::before,
-.institution::before,
-.organization::before,
-.awarder::before {
-  content: "at ";
-}
-
 .company,
 .institution,
 .organization,
 .awarder {
   color: #666;
   font-weight: 400;
-  /* font-size: small; */
 }
 
 .section header .date {
@@ -428,24 +418,6 @@ section .location {
   padding-bottom: 0.5em;
 }
 
-.fa.social {
-  font-size: 1.1em;
-}
-
-
-
-.stack-overflow::after {
-  position: absolute;
-  left: 0;
-  content: "\f16c";
-  color: #f68a1f;
-  overflow: hidden;
-  height: 100%;
-}
-
-.telegram {
-  color: #2291c3;
-}
 
 #languages .item,
 #skills .item,
@@ -464,59 +436,6 @@ section .location {
   width: 15em;
 }
 
-/* Skill chart */
-
-.level {
-  margin-bottom: 0.5em;
-}
-
-.level em {
-  padding-left: 0.2em;
-}
-
-.level .bar {
-  border: 1px solid #ddd;
-  display: block;
-  width: 10em;
-  height: 5px;
-  position: relative;
-}
-
-.level .bar::after {
-  position: absolute;
-  content: " ";
-  top: 0;
-  left: 0;
-  background: black;
-  height: 5px;
-}
-
-.level.beginner .bar::after {
-  background: #eb5f51;
-  width: 2.5em;
-}
-
-.level.intermediate .bar::after {
-  background: #ffdf1f;
-  width: 5em;
-}
-
-.level.advanced .bar::after,
-.level.fluent .bar::after {
-  background: #5cb85c;
-  width: 7.5em;
-}
-
-.level.master .bar::after,
-.level.native.speaker .bar::after {
-  background: #59c596;
-  width: 10em;
-}
-
-#references .item {
-  padding-left: 0.5em;
-  border-left: 5px solid #ff6d1f;
-}
 
 .toggle-item {
   display: none;
@@ -541,15 +460,9 @@ section .location {
   opacity: 1 !important;
 }
 
-/****************
-*		TABLET
-****************/
 
 @media screen and (min-width: 602px) {
-  /* #resume {
-    width: 80%;
-    margin: 5rem auto;
-  } */
+
   .section header .date {
     float: right;
     font-weight: 600;
@@ -557,9 +470,6 @@ section .location {
   }
 }
 
-/****************
-*		LAPTOP
-****************/
 
 @media screen and (min-width: 1025px) {
   li {
@@ -567,7 +477,6 @@ section .location {
   }
   #resume {
     max-width: 1080px;
-    /* margin: 2rem auto; */
   }
   .section > section > header .space-left {
     opacity: 1;
@@ -585,6 +494,7 @@ section .location {
   .toggle-item:checked + label:after {
     content: "\2212";
   }
+
   .toggle-item + label:after {
     float: left;
     cursor: pointer;
@@ -592,17 +502,15 @@ section .location {
     color: #aaa;
     font-size: 16px;
     font-weight: 900;
-    font-family: "Font Awesome 5 Free";
     content: "\002B";
   }
-  .toggle-item ~ .item {
+  .toggle-item {
     height: 0;
     opacity: 0;
   }
   .toggle-item:checked ~ .item {
     height: auto;
     opacity: 1;
-    transition: all 0.5s linear;
   }
   .company::before,
   .institution::before,
@@ -623,120 +531,5 @@ section .location {
   }
   .display:not(.none) {
     display: block;
-  }
-}
-
-@media print {
-  #resume {
-    margin: 2rem auto;
-    margin: 0.1em;
-    padding: 0.1em;
-    -ms-word-wrap: break-word;
-    word-wrap: break-word;
-    line-height: 1.25;
-  }
-  @page {
-    margin: 1cm 1.4cm;
-  }
-  .item-count {
-    display: none;
-  }
-  .company::before,
-  .institution::before,
-  .organization::before,
-  .awarder::before {
-    content: "at ";
-  }
-  .main-summary {
-    padding: 0;
-    background: transparent;
-  }
-  .section {
-    margin: 0.8rem 0;
-    padding: 0;
-  }
-  .section header {
-    padding-bottom: 0.15rem;
-  }
-  .section .location {
-    padding-bottom: 0.15rem;
-  }
-  .section > section > section {
-    margin: 0 0 1em 0;
-  }
-  .section > section > section:last-of-type {
-    margin: 0;
-  }
-  .stack-overflow::after {
-    content: "";
-  }
-  .fa.social {
-    color: #828386;
-  }
-  ul {
-    margin-top: 0.4em; 
-  }
-  ul,
-  li {
-    padding: 0;
-  }
-  ul.keywords li,
-  ul.courses li {
-    display: inline;
-    margin: 0;
-    padding: 0;
-    font-size: 0.8rem;
-    background: transparent;
-  }
-  ul.keywords li::after,
-  ul.courses li::after {
-    padding: 0 0 0 0.1rem;
-    content: " |";
-  }
-  ul.keywords::before,
-  ul.courses::before {
-    font-size: 0.8rem;
-    font-weight: 600;
-  }
-  #skills .item {
-    /* width: calc(100% / 3); */
-    padding: 0;
-  }
-  .highlights {
-    margin: 0.5em 0 0 0;
-  }
-  ul.keywords::before {
-    content: "Skills acquired: ";
-  }
-  #skills .keywords::before {
-    content: none;
-  }
-  .section p {
-    margin: 0;
-    padding: 0;
-  }
-  ul.courses::before {
-    content: "Major courses: ";
-  }
-  ul.keywords li:last-of-type::after,
-  ul.courses li:last-of-type::after {
-    content: "";
-  }
-  .level em {
-    font-style: normal;
-    padding: 0.1em 0;
-  }
-  .level .bar {
-    display: none;
-  }
-  #profiles .item {
-    padding: 0;
-  }
-  .item.display {
-    display: block;
-    opacity: 1 !important;
-  }
-  .fa-map-marker-alt:before {
-    padding-left: 0.1em;
   }
 }
