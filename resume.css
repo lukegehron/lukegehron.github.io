@@ -450,12 +450,22 @@ section .location {
   cursor: pointer;
 }
 
+.collapsible:hover {
+  margin: -4px;
+  padding: 4px;
+  border-radius: 8px;
+  background: #eee;
+  width: 100%;
+  cursor: pointer;
+  z-index: 200;
+}
 
-.collapsible:after {
+
+/* .collapsible:after {
   font-weight: bold;
   float: right;
   margin-left: 5px;
-}
+} */
 
 
 .content {
