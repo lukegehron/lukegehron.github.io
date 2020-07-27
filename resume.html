@@ -202,11 +202,14 @@
               <div class="item">
                 <div class="summary">{{award.summary}}</div>
               </div>
+              <div v-if="award.award" class="item">
+                <div class="summary">{{award.award}}</div>
+              </div>
             </section>
           </section>
         </section>
 
-        <section class="section">
+<!--         <section class="section">
           <header>
             <h2 class='section-title'>Recognition</h2>
           </header>
@@ -231,7 +234,7 @@
               </header>
             </section>
           </section>
-        </section>
+        </section> -->
       </div>
     </div>
   </div>
