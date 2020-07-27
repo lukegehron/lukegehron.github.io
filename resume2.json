@@ -140,17 +140,20 @@
     "title": "Hackathon Participant",
     "date": "July 2020",
     "awarder": "AECTech Hackathon",
-    "summary": "Virtual - Hack My TreeHouse \\n AWARDED: Best Overall Hack"
+    "summary": "Virtual - Hack My TreeHouse",
+    "award": "WINNER: Best Overall Hack"
   },{          
     "title": "Hackathon Participant",
     "date": "Mar 2020",
     "awarder": "BeyondAEC Hackathon",
-    "summary": "Waltham MA - SolVR"
+    "summary": "Waltham MA - SolVR",
+    "award": "WINNER: Most Innovative Use of Technology"
   },{          
     "title": "Hackathon Participant",
     "date": "Jan 2020",
     "awarder": "MIT Reality Hackathon",
-    "summary": "Cambridge MA - SpaceAR"
+    "summary": "Cambridge MA - SpaceAR",
+    "award": "WINNER: Best AR/VR App in Utility and Tools"
   },{
     "title": "Conference Speaker",
     "date": "Oct 2019",
@@ -160,7 +163,8 @@
     "title": "Hackathon Participant",
     "date": "Oct 2019",
     "awarder": "AEC Tech Hackathon",
-    "summary": "New York City - BLDG Ballot"
+    "summary": "New York City - BLDG Ballot",
+    "award": "WINNER: Best Team Collaboration"
   },{          
     "title": "Workshop Participant",
     "date": "Aug 2019",
@@ -170,7 +174,8 @@
     "title": "Hackathon Participant",
     "date": "Jan 2019",
     "awarder": "Reality Virtually Hackathon",
-    "summary": "Cambridge MA - Sound Space"
+    "summary": "Cambridge MA - Sound Space",
+    "award": "WINNER: Best VR in Industrial Commercial"
   },{          
     "title": "Conference Speaker",
     "date": "Nov 2018",
