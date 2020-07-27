@@ -138,6 +138,11 @@
     ]
   }],"awards": [{          
     "title": "Hackathon Participant",
+    "date": "July 2020",
+    "awarder": "AECTech Hackathon",
+    "summary": "Virtual - Hack My TreeHouse \n Best Overall Hack"
+  },{          
+    "title": "Hackathon Participant",
     "date": "Mar 2020",
     "awarder": "BeyondAEC Hackathon",
     "summary": "Waltham MA - SolVR"
