@@ -24,6 +24,9 @@
     <titlebar></titlebar>
     <br><br><br><br><br>
 
+    <!-- <a href={{id}} v-on:click="clicked">Click me</a> -->
+    
+
     <div class="main-grid">
 
       <main>
@@ -90,6 +93,8 @@
         </div>
       </section>
     </section>
+
+    <button v-on:click="clicked" style ="width:100%">Next Project</button>
 
   </div>
 
@@ -224,6 +229,7 @@
       methods: {
  
         updateProject(project) {
+          this.id = parseInt(project.id)+1
           this.image = project.image
           this.lines = project.lines
           this.name = project.name
@@ -239,7 +245,31 @@
           this.title = project.name.toUpperCase()
           this.content = 'url(' + project.image + ')'
           this.team = project.team
-        }
+        },
+
+        clicked(){
+
+          var currentUrl = window.location.pathname;
+        console.log(currentUrl);
+        console.log(window.location.href);
+        var str = window.location.href;
+        var res = str.split("#");
+        var res0 = res[0];
+        var res1 = parseInt(res[1])+1;
+
+        this.updateProject(this.project[res1])
+        console.log(this.project[res1]);
+        this.reload()
+        
+        document.title = "LUKE GEHRON // " + this.title
+        window.location.href = res0 + "#" + res1;
+
+      },
+      reload() {
+      this.$forceUpdate();
+    }
+
+
       },
       created: function () {
         var currentUrl = window.location.pathname;
@@ -252,7 +282,11 @@
         this.updateProject(this.project[res])
         document.title = "LUKE GEHRON // " + this.title
 
-      }
+      },
+
+      
+
+      
 
     })
 
