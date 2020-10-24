@@ -136,10 +136,21 @@
       "Thesis Research",
       "Digital Fabrication and Assembly"
     ]
-  }],"awards": [{          
-    "title": "Speaker",
+  }],"awards": [{
+    "title": "Workshop Participant",
+    "date": "Oct 2020",
+    "awarder": "ACADIA 2020",
+    "summary": "Virtual - Computation with Hypar"
+  },{          
+    "title": "Hackathon Participant",
+    "date": "Oct 2020",
+    "awarder": "AEC Tech Hackathon",
+    "summary": "Virtual - EZ-EC: Embodied Carbon made Eazy",
+    "award": "Best Overall Hack"
+  },{          
+    "title": "Conference Speaker",
     "date": "Sept 2020",
-    "awarder": "AIA Intersections Research Conference",
+    "awarder": "AIA Intersections Research",
     "summary": "Virtual - LCA Tool Development and Facade System Selection"
   },{          
     "title": "Hackathon Participant",
