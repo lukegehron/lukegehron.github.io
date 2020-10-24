@@ -77,7 +77,7 @@
       <section id="skills">
         <div class="item">
           <h3 class="name" >
-            Technology used
+            Tools & Technology
           </h3>
           <ul class="keywords" v-for="skill in skills">
             <li>{{skill}}</li>
@@ -85,16 +85,27 @@
         </div>
         <div class="item">
           <h3 class="name">
-            Team
+            Project Team
           </h3>
           <ul class="keywords" v-for="person in team">
             <li>{{person}}</li>
           </ul>
         </div>
+        <div class="item">
+          <h3 class="name">
+            Project Length
+          </h3>
+          <ul class="keywords">
+            <li>{{timeframe}}</li>
+          </ul>
+        </div>
       </section>
     </section>
-
-    <button v-on:click="clicked" style ="width:100%">Next Project</button>
+    <hr>
+    <br>
+    <button v-on:click="clickedback" style ="width:100px; float:left; border:none; height:50px; padding: 10px; border-radius: 3px; color:#666; background:#eee">Prev Project</button>
+    <button v-on:click="clicked" style ="width:100px; float:right; border:none; height:50px; padding: 10px; ; border-radius: 3px; color:#666; background:#eee">Next Project</button>
+    <br><br><br><br><br>
 
   </div>
 
@@ -139,7 +150,8 @@
               "Adam Chernick",
               "Sabrina Noumoviski",
               "Zeyu Ren"
-            ]
+            ],
+            timeframe: "4 days"
           }, {
             id: 1,
             name: 'Solar Comfort Tool',
@@ -172,8 +184,9 @@
               "D3.js"
             ],
             team: [
-              "Payette Building Science Group"
-            ]
+              "Payette | Building Science Group"
+            ],
+            timeframe: "1 year"
           },{
             id: 2,
             name: 'Acoustic Analysis Tool',
@@ -208,8 +221,9 @@
               "C#"
             ],
             team: [
-              "Payette Research Group"
-            ]
+              "Payette | Research Group"
+            ],
+            timeframe: "6 months"
           },
           {
             id: 2,
@@ -245,6 +259,7 @@
           this.title = project.name.toUpperCase()
           this.content = 'url(' + project.image + ')'
           this.team = project.team
+          this.timeframe = project.timeframe
         },
 
         clicked(){
@@ -264,7 +279,24 @@
         document.title = "LUKE GEHRON // " + this.title
         window.location.href = res0 + "#" + res1;
 
-      },
+      },clickedback(){
+
+var currentUrl = window.location.pathname;
+console.log(currentUrl);
+console.log(window.location.href);
+var str = window.location.href;
+var res = str.split("#");
+var res0 = res[0];
+var res1 = parseInt(res[1])-1;
+
+this.updateProject(this.project[res1])
+console.log(this.project[res1]);
+this.reload()
+
+document.title = "LUKE GEHRON // " + this.title
+window.location.href = res0 + "#" + res1;
+
+},
       reload() {
       this.$forceUpdate();
     }

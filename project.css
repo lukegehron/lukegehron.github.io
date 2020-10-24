@@ -7,6 +7,8 @@
   margin-left: -15%;
 }
 
+
+
 @media (min-width: 768px) {
 
   .backgroundIMG {
@@ -145,3 +147,4 @@ li {
 .item{
   margin-right: 50px;
 }
+

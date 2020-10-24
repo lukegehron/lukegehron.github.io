@@ -137,60 +137,65 @@
       "Digital Fabrication and Assembly"
     ]
   }],"awards": [{          
+    "title": "Speaker",
+    "date": "Sept 2020",
+    "awarder": "AIA Intersections Research Conference",
+    "summary": "Virtual - LCA Tool Development and Facade System Selection"
+  },{          
     "title": "Hackathon Participant",
     "date": "July 2020",
     "awarder": "AECTech Hackathon",
     "summary": "Virtual - Hack My TreeHouse",
-    "award": "WINNER: Best Overall Hack"
+    "award": "Best Overall Hack"
   },{          
     "title": "Hackathon Participant",
     "date": "Mar 2020",
     "awarder": "BeyondAEC Hackathon",
-    "summary": "Waltham MA - SolVR",
-    "award": "WINNER: Most Innovative Use of Technology"
+    "summary": "Waltham, MA - SolVR",
+    "award": "Most Innovative Use of Technology"
   },{          
     "title": "Hackathon Participant",
     "date": "Jan 2020",
     "awarder": "MIT Reality Hackathon",
-    "summary": "Cambridge MA - SpaceAR",
-    "award": "WINNER: Best AR/VR App in Utility and Tools"
+    "summary": "Cambridge, MA - SpaceAR",
+    "award": "Best AR/VR App in Utility and Tools"
   },{
     "title": "Conference Speaker",
     "date": "Oct 2019",
     "awarder": "ACADIA 2019",
-    "summary": "Austin TX - Sound Space"
+    "summary": "Austin, TX - Sound Space"
   },{          
     "title": "Hackathon Participant",
     "date": "Oct 2019",
     "awarder": "AEC Tech Hackathon",
-    "summary": "New York City - BLDG Ballot",
-    "award": "WINNER: Best Team Collaboration"
+    "summary": "New York City, NY - BLDG Ballot",
+    "award": "Best Team Collaboration"
   },{          
     "title": "Workshop Participant",
     "date": "Aug 2019",
     "awarder": "ACAW / Boston Valley",
-    "summary": "Buffalo NY - Terracotta Hexture"
+    "summary": "Buffalo, NY - Terracotta Hexture"
   },{          
     "title": "Hackathon Participant",
     "date": "Jan 2019",
     "awarder": "Reality Virtually Hackathon",
-    "summary": "Cambridge MA - Sound Space",
-    "award": "WINNER: Best VR in Industrial Commercial"
+    "summary": "Cambridge, MA - Sound Space",
+    "award": "Best VR in Industrial Commercial"
   },{          
     "title": "Conference Speaker",
     "date": "Nov 2018",
     "awarder": "ABX Expo Boston",
-    "summary": "Boston MA - Technical Storytelling"
+    "summary": "Boston, MA - Technical Storytelling"
   },{          
     "title": "Hackathon Participant",
     "date": "July 2018",
     "awarder": "BeyondAEC Hackathon",
-    "summary": "Watertown MA - J3LLY: Rhino Control"
+    "summary": "Watertown, MA - J3LLY: Rhino Control"
   },{          
     "title": "Workshop Participant",
     "date": "July 2014",
     "awarder": "AA Visting School",
-    "summary": "New York City - Embedded Intelligence"
+    "summary": "New York City, NY - Embedded Intelligence"
   }],
   
   "publications": [{
